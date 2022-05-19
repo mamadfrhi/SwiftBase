@@ -159,7 +159,7 @@ class ViewController: UIViewController {
     private func drawImagesAndText() {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
         
-        let image = renderer.image { ctx in
+        let image = renderer.image { _ in
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center
             
@@ -286,22 +286,26 @@ extension ViewController {
             
             // face
             let face = CGRect(x: -128, y: -128, width: 256, height: 256)
-            cgContext.strokeEllipse(in: face)
+            cgContext.addEllipse(in: face)
             
             let eyeSize = 50
             let startEye = 80
             // draw left eye
             let leftEye = CGRect(x: -startEye, y: -startEye, width: eyeSize, height: eyeSize)
-            cgContext.strokeEllipse(in: leftEye)
+            cgContext.addEllipse(in: leftEye)
             
             // draw right eye
             let rightEye = CGRect(x: (startEye - eyeSize), y: -startEye, width: eyeSize, height: eyeSize)
-            cgContext.strokeEllipse(in: rightEye)
+            cgContext.addEllipse(in: rightEye)
             
             // draw mouth
             let mouthSize = 80
             let mouth = CGRect(x: -(mouthSize/2), y: 16, width: mouthSize, height: mouthSize)
-            cgContext.strokeEllipse(in: mouth)
+            cgContext.addEllipse(in: mouth)
+            
+            cgContext.setStrokeColor(UIColor.red.cgColor)
+            cgContext.setLineWidth(2)
+            cgContext.strokePath()
         }
         
         imageView.image = image
