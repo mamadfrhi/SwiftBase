@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBAction func redrawTapped(_ sender: Any) {
         currentDrawType += 1
-        if currentDrawType == 9 { currentDrawType = 0 }
+        if currentDrawType == 10 { currentDrawType = 0 }
         
         switch currentDrawType {
         case 0:
@@ -284,7 +284,7 @@ extension ViewController {
             let cgContext = ctx.cgContext
             cgContext.translateBy(x: 256, y: 256)
             
-            
+            // face
             let face = CGRect(x: -128, y: -128, width: 256, height: 256)
             cgContext.strokeEllipse(in: face)
             
@@ -302,8 +302,6 @@ extension ViewController {
             let mouthSize = 80
             let mouth = CGRect(x: -(mouthSize/2), y: 16, width: mouthSize, height: mouthSize)
             cgContext.strokeEllipse(in: mouth)
-            
-            cgContext.setStrokeColor(UIColor.red.cgColor)
         }
         
         imageView.image = image
