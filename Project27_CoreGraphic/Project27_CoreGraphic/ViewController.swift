@@ -182,8 +182,10 @@ class ViewController: UIViewController {
         }
         imageView.image = image
     }
-    
-    // Custom Mamad
+}
+
+// Custom shapes & Challenges
+extension ViewController {
     private func drawLadder() {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 500, height: 512))
         
@@ -206,6 +208,7 @@ class ViewController: UIViewController {
                 }
             }
             
+            cgContext.setLineWidth(2)
             cgContext.setStrokeColor(UIColor.black.cgColor)
             cgContext.strokePath()
         }
@@ -266,7 +269,8 @@ class ViewController: UIViewController {
                 
                 cgContext.rotate(by: degree)
             }
-            cgContext.drawPath(using: .stroke)
+            cgContext.setLineWidth(2)
+            cgContext.strokePath()
         }
         
         imageView.image = image
@@ -305,6 +309,7 @@ class ViewController: UIViewController {
         imageView.image = image
     }
 }
+    
 
-// https://www.youtube.com/watch?v=y7NZvkTig40&ab_channel=PaulHudson
+// The base tutorial is from below
 // https://www.hackingwithswift.com/read/27/overview

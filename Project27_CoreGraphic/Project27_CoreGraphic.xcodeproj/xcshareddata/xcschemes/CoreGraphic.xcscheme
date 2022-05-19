@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87B31081282D084C00582733"
-               BuildableName = "CoreGraphic.app"
+               BuildableName = "Project27_CoreGraphic.app"
                BlueprintName = "Project27_CoreGraphic"
                ReferencedContainer = "container:Project27_CoreGraphic.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87B31081282D084C00582733"
-            BuildableName = "CoreGraphic.app"
+            BuildableName = "Project27_CoreGraphic.app"
             BlueprintName = "Project27_CoreGraphic"
             ReferencedContainer = "container:Project27_CoreGraphic.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87B31081282D084C00582733"
-            BuildableName = "CoreGraphic.app"
+            BuildableName = "Project27_CoreGraphic.app"
             BlueprintName = "Project27_CoreGraphic"
             ReferencedContainer = "container:Project27_CoreGraphic.xcodeproj">
          </BuildableReference>
