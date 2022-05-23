@@ -10,15 +10,15 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
-    var selectedImage: String?
+    var selectionInfo: (name: String?, index: Int, totalCount: Int)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = selectedImage
+        configNavigationBar()
         navigationItem.largeTitleDisplayMode = .never
         
-        if let imageToLoad = selectedImage {
+        if let imageToLoad = selectionInfo?.name {
             imageView.image = UIImage(named: imageToLoad)
         }
     }
@@ -31,5 +31,11 @@ class DetailViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.hidesBarsOnTap = false
+    }
+    
+    private func configNavigationBar() {
+        if let selectionInfo = selectionInfo {
+            self.title = "\(selectionInfo.index + 1)/\(selectionInfo.totalCount)"
+        }
     }
 }

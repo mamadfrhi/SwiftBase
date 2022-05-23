@@ -26,6 +26,7 @@ class ViewController: UITableViewController {
                 pictures.append(item)
             }
         }
+        pictures.sort()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,12 +37,14 @@ class ViewController: UITableViewController {
         super.tableView(tableView, cellForRowAt: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
         cell.textLabel?.text = pictures[indexPath.row]
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-            vc.selectedImage = pictures[indexPath.row]
+            let imageName = pictures[indexPath.row]
+            vc.selectionInfo = (imageName, indexPath.row, pictures.count)
             navigationController?.pushViewController(vc, animated: true)
         }
     }

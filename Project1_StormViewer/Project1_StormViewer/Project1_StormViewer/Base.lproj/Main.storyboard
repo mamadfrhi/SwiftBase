@@ -61,11 +61,10 @@
                         <viewLayoutGuide key="safeArea" id="sLa-Fr-efW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lEW-gv-xcZ" firstAttribute="bottom" secondItem="sLa-Fr-efW" secondAttribute="bottom" constant="34" id="NRh-Xd-z8t"/>
-                            <constraint firstItem="lEW-gv-xcZ" firstAttribute="centerY" secondItem="RlJ-u6-lz9" secondAttribute="centerY" id="U5h-Nn-niB"/>
-                            <constraint firstItem="sLa-Fr-efW" firstAttribute="top" secondItem="lEW-gv-xcZ" secondAttribute="top" constant="44" id="bsK-SJ-axr"/>
-                            <constraint firstItem="lEW-gv-xcZ" firstAttribute="centerX" secondItem="RlJ-u6-lz9" secondAttribute="centerX" id="vsu-b6-7cm"/>
-                            <constraint firstItem="lEW-gv-xcZ" firstAttribute="leading" secondItem="sLa-Fr-efW" secondAttribute="leading" id="zDI-C3-k4e"/>
+                            <constraint firstItem="lEW-gv-xcZ" firstAttribute="bottom" secondItem="sLa-Fr-efW" secondAttribute="bottom" constant="34" id="29N-w2-aAp"/>
+                            <constraint firstItem="lEW-gv-xcZ" firstAttribute="top" secondItem="RlJ-u6-lz9" secondAttribute="topMargin" constant="-44" id="jED-o3-Cvs"/>
+                            <constraint firstItem="lEW-gv-xcZ" firstAttribute="leading" secondItem="sLa-Fr-efW" secondAttribute="leading" id="lzy-7z-W6B"/>
+                            <constraint firstItem="sLa-Fr-efW" firstAttribute="trailing" secondItem="lEW-gv-xcZ" secondAttribute="trailing" id="nFv-a4-G4z"/>
                         </constraints>
                     </view>
                     <connections>
