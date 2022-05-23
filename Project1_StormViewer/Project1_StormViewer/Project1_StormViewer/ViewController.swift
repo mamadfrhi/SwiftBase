@@ -37,7 +37,6 @@ class ViewController: UITableViewController {
         super.tableView(tableView, cellForRowAt: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
         cell.textLabel?.text = pictures[indexPath.row]
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
         return cell
     }
     
