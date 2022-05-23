@@ -5,7 +5,7 @@ These project's base are from [hackingwithswift.com ](https://www.hackingwithswi
 
 ## [UIKit](https://www.hackingwithswift.com/read)
 
-[Project 1: Storm Viewer ](https://github.com/mamadfrhi/SwiftBase/tree/main/Project1_StormViewer/Project1_StormViewer)
+[Project 1: Storm Viewer ](https://github.com/mamadfrhi/SwiftBase/tree/main/Project1_StormViewer)
 
 [Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
 
