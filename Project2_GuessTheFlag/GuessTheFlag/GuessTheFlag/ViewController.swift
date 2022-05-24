@@ -31,10 +31,16 @@ class ViewController: UIViewController {
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
+        configBarButton()
         askQuestion()
     }
     
     private func askQuestion(action: UIAlertAction! = nil) {
+        if questionAsked == 5 {
+            showResultAlertAction()
+            return
+        }
+        
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         
@@ -58,11 +64,11 @@ class ViewController: UIViewController {
             score += 1
         }else {
             let selectedCountry = countries[tag]
-            title = "Wrong\nIt's flag of \(selectedCountry)"
+            title = "Wrong!\nIt's flag of \(selectedCountry.uppercased())"
             score -= 1
         }
         
-        (questionAsked <= 10) ? showAlertAction(title: title) : showResultAlertAction()
+        showAlertAction(title: title)
     }
     
     private func showResultAlertAction() {
@@ -73,11 +79,12 @@ class ViewController: UIViewController {
         present(ac, animated: true)
     }
     
-    private func showAlertAction(title: String) {
+    @objc private func showAlertAction(title: String) {
         let ac = UIAlertController(title: title,
                                    message: "Your score is \(score)",
                                    preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+        let handler = (title == "") ? nil : askQuestion
+        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: handler))
         present(ac, animated: true)
     }
     
@@ -86,5 +93,14 @@ class ViewController: UIViewController {
         correctAnswer = 0
         questionAsked = 0
         askQuestion()
+    }
+    
+    private func configBarButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
+                                                            target: self,
+                                                            action: #selector(barButtonPressed))
+    }
+    @objc private func barButtonPressed() {
+        showAlertAction(title: "")
     }
 }
