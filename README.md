@@ -9,5 +9,6 @@ These project's base are from [hackingwithswift.com ](https://www.hackingwithswi
 
 [Project 2: Guess The Flag ](https://github.com/mamadfrhi/SwiftBase/tree/main/Project2_GuessTheFlag)
 
-[Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
+[Project 3: Social Media](https://github.com/mamadfrhi/SwiftBase/tree/main/Project3_SocialMedia)
 
+[Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
