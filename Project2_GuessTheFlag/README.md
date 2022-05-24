@@ -1,5 +1,20 @@
 
 
+## What used? 🛠 
+
+* UIAlertController
+* UIButton
+* CALayer
+* UIColor
+* Outlets
+* Asset catalogs
+* Interface Builder
+* Random numbers
+* Auto Layout
+* Actions
+ 
+
+
 ## Showcase 📱
 
 
