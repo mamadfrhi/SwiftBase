@@ -67,6 +67,11 @@ class WebVC: UIViewController {
 extension WebVC: WKNavigationDelegate {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
+            if webView.estimatedProgress == 1 {
+                progressView.isHidden = true
+            } else{
+                progressView.isHidden = false
+            }
             progressView.progress = Float(webView.estimatedProgress)
         }
     }
