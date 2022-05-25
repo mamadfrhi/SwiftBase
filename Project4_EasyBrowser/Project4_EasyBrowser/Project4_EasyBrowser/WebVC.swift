@@ -8,11 +8,11 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class WebVC: UIViewController {
     
     private var webView: WKWebView!
     private var progressView: UIProgressView!
-    private var websites = ["youtube.com", "apple.com", "hackingwithswift.com"]
+    var websites : [String]!
     
     override func loadView() {
         webView = WKWebView()
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: WebView
-extension ViewController: WKNavigationDelegate {
+extension WebVC: WKNavigationDelegate {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             progressView.progress = Float(webView.estimatedProgress)
@@ -100,7 +100,7 @@ extension ViewController: WKNavigationDelegate {
 }
 
 // MARK: UIBarButtons
-extension ViewController {
+extension WebVC {
     // rightBarButtonItem
     @objc private func openTapped() {
         let ac = UIAlertController(title: "Open page...",
