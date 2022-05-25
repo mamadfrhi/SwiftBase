@@ -32,10 +32,18 @@ class ViewController: UIViewController {
                                      target: nil, action: nil)
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh,
                                       target: webView, action: #selector(webView.reload))
-        progressView = UIProgressView(progressViewStyle: .default) // TODO: Try other styles as well
+        progressView = UIProgressView(progressViewStyle: .default)
         progressView.sizeToFit()
         let progressButton = UIBarButtonItem(customView: progressView)
-        toolbarItems = [progressButton, spacer, refresh]
+        
+        let backButton = UIBarButtonItem(barButtonSystemItem: .rewind,
+                                         target: webView,
+                                         action: #selector(webView.goBack))
+        let forwardButton = UIBarButtonItem(barButtonSystemItem: .fastForward,
+                                         target: webView,
+                                         action: #selector(webView.goForward))
+        
+        toolbarItems = [backButton, forwardButton, spacer, progressButton, spacer, refresh]
         navigationController?.isToolbarHidden = false
     }
     private func configNavigationBar() {
@@ -79,7 +87,7 @@ extension ViewController: WKNavigationDelegate {
             }
         }
         decisionHandler(.cancel)
-        showBlockedWebAddressAlert()
+        if url?.absoluteString != "about:blank" { showBlockedWebAddressAlert() }
     }
     
     private func showBlockedWebAddressAlert() {
