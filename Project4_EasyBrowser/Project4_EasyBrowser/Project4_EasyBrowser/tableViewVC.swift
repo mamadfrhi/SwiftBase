@@ -28,10 +28,13 @@ class TableViewVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let webVC = WebVC()
         let row = indexPath.row
-        websites.insert(websites[row], at: 0)
+        
+        let chosenWebsite = websites[row]
         websites.remove(at: row)
+        websites.insert(chosenWebsite, at: 0)
+        
+        let webVC = WebVC()
         webVC.websites = websites
         navigationController?.pushViewController(webVC, animated: true)
     }
