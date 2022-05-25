@@ -11,7 +11,7 @@ These project's base are from [hackingwithswift.com ](https://www.hackingwithswi
 
 [Project 3: Social Media](https://github.com/mamadfrhi/SwiftBase/tree/main/Project3_SocialMedia)
 
-[Project 4: Easy Browser](https://github.com/mamadfrhi/SwiftBase/tree/main/project4_EasyBrowser)
+[Project 4: Easy Browser](https://github.com/mamadfrhi/SwiftBase/tree/main/Project4_EasyBrowser)
 
 [Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
 
