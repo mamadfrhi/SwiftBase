@@ -65,26 +65,26 @@ class ViewController: UITableViewController {
                         tableView.insertRows(at: [indexPath], with: .automatic)
                         return
                     } else { // isReal failed
-                        showError(title: "Word not recognized",
+                        showErrorAlert(title: "Word not recognized",
                                   message: "You can't just make them up, you know!")
                     }
                 } else { // is original failed
-                    showError(title: "Word already used",
+                    showErrorAlert(title: "Word already used",
                               message: "Be more original")
                 }
             } else {// is real failed
-                showError(title: "Word not possible",
+                showErrorAlert(title: "Word not possible",
                           message: "You can't spell \(answer) word from \(title!.lowercased())")
             }
         } else { // is long enough failed
-            showError(title: "Word is too short",
+            showErrorAlert(title: "Word is too short",
                       message: "Your word should has more than 3 letters.")
         }
         
         
     }
     
-    private func showError(title: String, message: String) {
+    private func showErrorAlert(title: String, message: String) {
         let ac = UIAlertController(title: title,
                                    message: message,
                                    preferredStyle: .alert)
