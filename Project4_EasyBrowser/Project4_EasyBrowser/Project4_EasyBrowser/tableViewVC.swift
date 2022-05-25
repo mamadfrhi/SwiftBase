@@ -7,7 +7,7 @@
 
 import UIKit
 
-class tableViewVC: UITableViewController {
+class TableViewVC: UITableViewController {
 
     private var websites = ["youtube.com", "apple.com", "hackingwithswift.com"]
     

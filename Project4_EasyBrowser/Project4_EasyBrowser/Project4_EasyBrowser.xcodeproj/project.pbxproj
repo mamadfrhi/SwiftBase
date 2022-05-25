@@ -13,7 +13,7 @@
 		8716751F283D4C72002E10D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8716751D283D4C72002E10D7 /* Main.storyboard */; };
 		87167521283D4C75002E10D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87167520283D4C75002E10D7 /* Assets.xcassets */; };
 		87167524283D4C75002E10D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87167522283D4C75002E10D7 /* LaunchScreen.storyboard */; };
-		87A1FE98283E567C001E661D /* tableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1FE97283E567C001E661D /* tableViewVC.swift */; };
+		87A1FE98283E567C001E661D /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1FE97283E567C001E661D /* TableViewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		87167520283D4C75002E10D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87167523283D4C75002E10D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87167525283D4C75002E10D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87A1FE97283E567C001E661D /* tableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewVC.swift; sourceTree = "<group>"; };
+		87A1FE97283E567C001E661D /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				87167517283D4C72002E10D7 /* AppDelegate.swift */,
 				87167519283D4C72002E10D7 /* SceneDelegate.swift */,
 				8716751B283D4C72002E10D7 /* WebVC.swift */,
-				87A1FE97283E567C001E661D /* tableViewVC.swift */,
+				87A1FE97283E567C001E661D /* TableViewVC.swift */,
 				8716751D283D4C72002E10D7 /* Main.storyboard */,
 				87167520283D4C75002E10D7 /* Assets.xcassets */,
 				87167522283D4C75002E10D7 /* LaunchScreen.storyboard */,
@@ -144,7 +144,7 @@
 				8716751C283D4C72002E10D7 /* WebVC.swift in Sources */,
 				87167518283D4C72002E10D7 /* AppDelegate.swift in Sources */,
 				8716751A283D4C72002E10D7 /* SceneDelegate.swift in Sources */,
-				87A1FE98283E567C001E661D /* tableViewVC.swift in Sources */,
+				87A1FE98283E567C001E661D /* TableViewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
