@@ -55,39 +55,47 @@ class ViewController: UITableViewController {
     private func submit(_ answer: String) {
         let lowerAnswer = answer.lowercased()
         
-        var errorTitle: String
-        var errorMessage: String
-        
-        if isPossible(word: lowerAnswer) {
-            if isOriginal(word: lowerAnswer) {
-                if isReal(word: lowerAnswer) {
-                    usedWords.insert(answer, at: 0)
-                    
-                    let indexPath = IndexPath(row: 0, section: 0)
-                    tableView.insertRows(at: [indexPath], with: .automatic)
-                    return
-                } else { // isReal failed
-                    errorTitle = "Word not recognized"
-                    errorMessage = "You can't just make them up, you know!"
+        if isLongEnough(word: lowerAnswer){
+            if isPossible(word: lowerAnswer) {
+                if isOriginal(word: lowerAnswer) {
+                    if isReal(word: lowerAnswer) {
+                        usedWords.insert(answer, at: 0)
+                        
+                        let indexPath = IndexPath(row: 0, section: 0)
+                        tableView.insertRows(at: [indexPath], with: .automatic)
+                        return
+                    } else { // isReal failed
+                        showError(title: "Word not recognized",
+                                  message: "You can't just make them up, you know!")
+                    }
+                } else { // is original failed
+                    showError(title: "Word already used",
+                              message: "Be more original")
                 }
-            } else { // is original failed
-                errorTitle = "Word already used"
-                errorMessage = "Be more original"
+            } else {// is real failed
+                showError(title: "Word not possible",
+                          message: "You can't spell \(answer) word from \(title!.lowercased())")
             }
-        } else {
-            errorTitle = "Word not possible"
-            errorMessage = "You can't spell that word from \(title!.lowercased())"
+        } else { // is long enough failed
+            showError(title: "Word is too short",
+                      message: "Your word should has more than 3 letters.")
         }
         
-        let ac = UIAlertController(title: errorTitle,
-                                   message: errorMessage,
+        
+    }
+    
+    private func showError(title: String, message: String) {
+        let ac = UIAlertController(title: title,
+                                   message: message,
                                    preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK!", style: .default))
         present(ac, animated: true)
     }
     
+    private func isLongEnough(word: String) -> Bool {
+        word.count > 3
+    }
     private func isPossible(word: String) -> Bool {
-        if (word.count < 4) { return false }
         
         guard var tempWord = title?.lowercased() else { return false }
         
