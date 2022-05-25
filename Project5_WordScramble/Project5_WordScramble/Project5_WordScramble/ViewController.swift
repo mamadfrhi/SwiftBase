@@ -14,11 +14,21 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configNavigationBar()
+        prepareAllWordsArray()
+        startGame()
+    }
+    
+    // preparation
+    private func configNavigationBar() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(promptForAnswer))
-        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
+                                                           target: self,
+                                                           action: #selector(startGame))
+    }
+    private func prepareAllWordsArray() {
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 allWords = startWords.components(separatedBy: "\n")
@@ -28,11 +38,8 @@ class ViewController: UITableViewController {
         if allWords.isEmpty {
             allWords = ["silkworm"]
         }
-        
-        startGame()
     }
-
-    private func startGame() {
+    @objc private func startGame() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
@@ -83,7 +90,6 @@ class ViewController: UITableViewController {
         
         
     }
-    
     private func showErrorAlert(title: String, message: String) {
         let ac = UIAlertController(title: title,
                                    message: message,
@@ -92,6 +98,7 @@ class ViewController: UITableViewController {
         present(ac, animated: true)
     }
     
+    // conditions
     private func isLongEnough(word: String) -> Bool {
         word.count > 3
     }
