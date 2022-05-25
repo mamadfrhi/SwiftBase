@@ -53,29 +53,6 @@ class ViewController: UIViewController {
                             options: .new,
                             context: nil)
     }
-    
-    @objc private func openTapped() {
-        let ac = UIAlertController(title: "Open page...",
-                                   message: nil,
-                                   preferredStyle: .actionSheet)
-        for website in websites {
-            ac.addAction(UIAlertAction(title: website,
-                                   style: .default,
-                                   handler: openPage))
-        }
-        ac.addAction(UIAlertAction(title: "Cancel",
-                                   style: .cancel))
-        ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        present(ac, animated: true)
-    }
-    
-    private func openPage(action: UIAlertAction) {
-        guard let actionTitle = action.title else { return }
-        guard let url = URL(string: "https://" + actionTitle) else { return }
-        webView.load(URLRequest(url: url))
-    }
-    
-    
 }
 
 // MARK: WebView
@@ -105,3 +82,27 @@ extension ViewController: WKNavigationDelegate {
     }
 }
 
+// MARK: UIBarButtons
+extension ViewController {
+    // rightBarButtonItem
+    @objc private func openTapped() {
+        let ac = UIAlertController(title: "Open page...",
+                                   message: nil,
+                                   preferredStyle: .actionSheet)
+        for website in websites {
+            ac.addAction(UIAlertAction(title: website,
+                                       style: .default,
+                                       handler: openPage))
+        }
+        ac.addAction(UIAlertAction(title: "Cancel",
+                                   style: .cancel))
+        ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(ac, animated: true)
+    }
+    
+    private func openPage(action: UIAlertAction) {
+        guard let actionTitle = action.title else { return }
+        guard let url = URL(string: "https://" + actionTitle) else { return }
+        webView.load(URLRequest(url: url))
+    }
+}
