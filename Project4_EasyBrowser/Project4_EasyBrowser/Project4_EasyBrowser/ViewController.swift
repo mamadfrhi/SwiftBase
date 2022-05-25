@@ -79,6 +79,15 @@ extension ViewController: WKNavigationDelegate {
             }
         }
         decisionHandler(.cancel)
+        showBlockedWebAddressAlert()
+    }
+    
+    private func showBlockedWebAddressAlert() {
+        let ac = UIAlertController(title: "This URL is blocked!",
+                                   message: nil,
+                                   preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+        present(ac, animated: true)
     }
 }
 
