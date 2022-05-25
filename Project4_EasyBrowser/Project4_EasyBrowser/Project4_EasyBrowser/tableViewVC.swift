@@ -15,6 +15,11 @@ class TableViewVC: UITableViewController {
         super.viewDidLoad()
         title = "Websites"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
