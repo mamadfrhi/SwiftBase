@@ -9,28 +9,50 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController, WKNavigationDelegate {
-
-    var webView: WKWebView!
+    
+    private var webView: WKWebView!
+    private var progressView: UIProgressView!
     
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configToolbar()
+        configNavigationBar()
+        configWebView()
+    }
+    
+    private func configToolbar() {
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                     target: nil, action: nil)
+        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh,
+                                      target: webView, action: #selector(webView.reload))
+        progressView = UIProgressView(progressViewStyle: .default) // TODO: Try other styles as well
+        progressView.sizeToFit()
+        let progressButton = UIBarButtonItem(customView: progressView)
+        toolbarItems = [progressButton, spacer, refresh]
+        navigationController?.isToolbarHidden = false
+    }
+    private func configNavigationBar() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open",
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(openTapped))
-        
+    }
+    private func configWebView() {
         let url = URL(string: "https://www.youtube.com")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+        webView.addObserver(self,
+                            forKeyPath: #keyPath(WKWebView.estimatedProgress),
+                            options: .new,
+                            context: nil)
     }
-
+    
     @objc private func openTapped() {
         let ac = UIAlertController(title: "Open page...",
                                    message: nil,
@@ -52,9 +74,15 @@ class ViewController: UIViewController, WKNavigationDelegate {
         guard let url = URL(string: "https://" + actionTitle) else { return }
         webView.load(URLRequest(url: url))
     }
-
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = webView.title
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            progressView.progress = Float(webView.estimatedProgress)
+        }
     }
 }
 
