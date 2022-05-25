@@ -52,7 +52,7 @@ class ViewController: UITableViewController {
         present(ac, animated: true)
     }
     
-    func submit(_ answer: String) {
+    private func submit(_ answer: String) {
         let lowerAnswer = answer.lowercased()
         
         var errorTitle: String
@@ -86,7 +86,9 @@ class ViewController: UITableViewController {
         present(ac, animated: true)
     }
     
-    func isPossible(word: String) -> Bool {
+    private func isPossible(word: String) -> Bool {
+        if (word.count < 4) { return false }
+        
         guard var tempWord = title?.lowercased() else { return false }
         
         for letter in word {
@@ -98,10 +100,12 @@ class ViewController: UITableViewController {
         }
         return true
     }
-    func isOriginal(word: String) -> Bool {
+    private func isOriginal(word: String) -> Bool {
         return !usedWords.contains(word)
     }
-    func isReal(word: String) -> Bool {
+    private func isReal(word: String) -> Bool {
+        if (word == title) { return false }
+        
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspelledRange = checker.rangeOfMisspelledWord(in: word,
