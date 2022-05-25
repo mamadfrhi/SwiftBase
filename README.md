@@ -13,6 +13,8 @@ These project's base are from [hackingwithswift.com ](https://www.hackingwithswi
 
 [Project 4: Easy Browser](https://github.com/mamadfrhi/SwiftBase/tree/main/Project4_EasyBrowser)
 
+[Project 5: Word Scramble](https://github.com/mamadfrhi/SwiftBase/tree/main/Project5_WordScramble)
+
 [Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
 
 ## [SwiftUI](https://www.hackingwithswift.com/100/swiftui)
