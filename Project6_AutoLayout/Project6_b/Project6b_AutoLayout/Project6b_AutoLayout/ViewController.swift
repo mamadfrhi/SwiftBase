@@ -71,13 +71,24 @@ class ViewController: UIViewController {
         // -(<=10)-| means make space FROM last label to the END of the screen grater than 10
         // when we want specify the size of the space(-), we must specify dashes before and after the size
         
+        // Auto layout has constraint priority
+        // the value is between 1-1000
+        // 1000 means absolutely required, anything less than that is optional
+        // it can be add to the constraints by @1-1000
+        
+        // here @999 added to the first label to make its size optional
+        // in order to make it compatible with landscape mode
+        // Then, copy other labels' sizes from the first 1,
+        // to prevent just first label from size changing unevenly
+        
         let metrics = ["labelHeight" : 88]
         
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
-                                                            "V:|[label1(labelHeight)]-[label2(labelHeight)]-[label3(labelHeight)]-[label4(labelHeight)]-[label5(labelHeight)]-(>=10)-|",
+                                                            "V:|[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]-(>=10)-|",
                                                            options: [],
                                                            metrics: metrics,
                                                            views: viewsDictionary))
     }
 }
+
 
