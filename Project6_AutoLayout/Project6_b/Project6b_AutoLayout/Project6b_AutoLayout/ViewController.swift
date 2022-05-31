@@ -64,11 +64,15 @@ class ViewController: UIViewController {
                                                                metrics: nil,
                                                                views: viewsDictionary))
         }
-        // | works like above
+        // |s works like above
         // - or dash make 10 points space between views by default
-        // pay attention, at the end of the view string there isn't |
-        //                                                                     V means Vertical
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1]-[label2]-[label3]-[label4]-[label5]",
+        //                                                              V means Vertical
+        // (==88) within [] means make labels' size equal 88
+        // -(<=10)-| means make space FROM last label to the END of the screen grater than 10
+        // when we want specify the size of the space(-), we must specify dashes before and after the size
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
+                                                            "V:|[label1(==88)]-[label2(==88)]-[label3(==88)]-[label4(==88)]-[label5(==88)]-(>=10)-|",
                                                            options: [],
                                                            metrics: nil,
                                                            views: viewsDictionary))
