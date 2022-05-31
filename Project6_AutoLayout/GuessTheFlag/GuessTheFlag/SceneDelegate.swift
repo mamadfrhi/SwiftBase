@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Project6_AutoLayout
+//  GuessTheFlag
 //
-//  Created by iMamad on 31.05.22.
+//  Created by iMamad on 23.05.22.
 //
 
 import UIKit
