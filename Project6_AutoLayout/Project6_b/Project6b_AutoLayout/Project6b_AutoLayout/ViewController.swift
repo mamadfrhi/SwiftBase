@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,15 +57,21 @@ class ViewController: UIViewController {
         ]
         
         for label in viewsDictionary.keys {
+            // | or pipe sign means edge of the view(here means ViewController.view)
+            // [] or brackets means edges of the view(here means label)
             //                                                                           H means Horizontal NOT Height!
-            // | or pipe sign means edge of the view
-            // [] or brackets are edges of the view
             view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|",
                                                                metrics: nil,
                                                                views: viewsDictionary))
         }
+        // | works like above
+        // - or dash make 10 points space between views by default
+        // pay attention, at the end of the view string there isn't |
+        //                                                                     V means Vertical
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1]-[label2]-[label3]-[label4]-[label5]",
+                                                           options: [],
+                                                           metrics: nil,
+                                                           views: viewsDictionary))
     }
-
-
 }
 
