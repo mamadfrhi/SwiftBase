@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addLabelsUsingAnchors()
     }
     
     private func addLabelsUsingVFL() { // VFL: Visual Formatting Language
@@ -132,7 +132,20 @@ class ViewController: UIViewController {
         view.addSubview(label4)
         view.addSubview(label5)
         
+        var previousLabel: UILabel?
         
+        for label in [label1, label2, label3, label4, label5] {
+            label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            label.heightAnchor.constraint(equalToConstant: 88).isActive = true
+            
+            if let previousLabel = previousLabel {
+                label.topAnchor.constraint(equalTo: previousLabel.bottomAnchor, constant: 10).isActive = true
+            } else {
+                label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+            }
+            
+            previousLabel = label
+        }
     }
 }
 
