@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-YM-Zin">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5n2-YM-Zin" secondAttribute="height" multiplier="2:1" id="9UH-ed-5jr"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1I-xS-H4Z"/>
@@ -25,6 +28,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h9-yk-8N5">
                                 <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3h9-yk-8N5" secondAttribute="height" multiplier="2:1" id="eNl-uS-cIb"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="us"/>
                                 <connections>
@@ -33,6 +39,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVF-e5-dye">
                                 <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MVF-e5-dye" secondAttribute="height" multiplier="2:1" id="q4l-ts-Ug6"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="us"/>
                                 <connections>
@@ -43,10 +52,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3h9-yk-8N5" secondAttribute="bottom" constant="20" id="2vW-IK-zLS"/>
                             <constraint firstItem="MVF-e5-dye" firstAttribute="centerX" secondItem="5n2-YM-Zin" secondAttribute="centerX" id="3rP-6Q-3vE"/>
                             <constraint firstItem="3h9-yk-8N5" firstAttribute="centerX" secondItem="MVF-e5-dye" secondAttribute="centerX" id="H3V-oq-zBT"/>
                             <constraint firstItem="5n2-YM-Zin" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="RaP-jJ-Xgx"/>
                             <constraint firstItem="MVF-e5-dye" firstAttribute="top" secondItem="5n2-YM-Zin" secondAttribute="bottom" constant="30" id="RmQ-eI-EDp"/>
+                            <constraint firstItem="MVF-e5-dye" firstAttribute="height" secondItem="5n2-YM-Zin" secondAttribute="height" id="Up3-oj-Asw"/>
+                            <constraint firstItem="3h9-yk-8N5" firstAttribute="height" secondItem="MVF-e5-dye" secondAttribute="height" id="e2r-Kf-ZKQ"/>
                             <constraint firstItem="5n2-YM-Zin" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="enu-Bl-0i0"/>
                             <constraint firstItem="3h9-yk-8N5" firstAttribute="top" secondItem="MVF-e5-dye" secondAttribute="bottom" constant="30" id="lR8-qX-K2o"/>
                         </constraints>
