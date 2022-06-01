@@ -43,6 +43,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		876ECD1B2847EF5800D006FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87E277F62847A22B00E69C5A /* Petition.swift */,
+				87E277F82847A2BA00E69C5A /* Petitions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		876ECD1C2847EF6600D006FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87AF358C28479D110000418F /* ViewController.swift */,
+				87E277FA2847A9DB00E69C5A /* DetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		876ECD1D2847EF7300D006FC /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				87AF358828479D110000418F /* AppDelegate.swift */,
+				87AF358A28479D110000418F /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		87AF357C28479D110000418F = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +89,9 @@
 		87AF358728479D110000418F /* Project7_WhitehousePetitions */ = {
 			isa = PBXGroup;
 			children = (
-				87AF358828479D110000418F /* AppDelegate.swift */,
-				87AF358A28479D110000418F /* SceneDelegate.swift */,
-				87AF358C28479D110000418F /* ViewController.swift */,
-				87E277FA2847A9DB00E69C5A /* DetailViewController.swift */,
-				87E277F62847A22B00E69C5A /* Petition.swift */,
-				87E277F82847A2BA00E69C5A /* Petitions.swift */,
+				876ECD1D2847EF7300D006FC /* Delegates */,
+				876ECD1C2847EF6600D006FC /* Views */,
+				876ECD1B2847EF5800D006FC /* Models */,
 				87AF358E28479D110000418F /* Main.storyboard */,
 				87AF359128479D130000418F /* Assets.xcassets */,
 				87AF359328479D130000418F /* LaunchScreen.storyboard */,
