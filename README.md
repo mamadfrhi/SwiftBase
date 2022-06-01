@@ -15,6 +15,8 @@ These project's base are from [hackingwithswift.com ](https://www.hackingwithswi
 
 [Project 5: Word Scramble](https://github.com/mamadfrhi/SwiftBase/tree/main/Project5_WordScramble)
 
+[Project 6: Auto Layout](https://github.com/mamadfrhi/SwiftBase/tree/main/Project6_AutoLayout)
+
 [Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
 
 ## [SwiftUI](https://www.hackingwithswift.com/100/swiftui)
