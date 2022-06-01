@@ -46,7 +46,12 @@ class ViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+}
 
+
+// MARK: TableView DataSource
+extension ViewController {
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         petitions.count
     }
