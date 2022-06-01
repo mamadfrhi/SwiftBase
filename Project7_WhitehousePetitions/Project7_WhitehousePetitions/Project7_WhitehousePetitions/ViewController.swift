@@ -15,7 +15,11 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addBarButtons()
-        
+        fetchData()
+        setTitles()
+    }
+    
+    private func fetchData() {
         let urlString : String
         
         if navigationController?.tabBarItem.tag == 0 {
@@ -40,6 +44,14 @@ class ViewController: UITableViewController {
             petitions = jsonPetitions.results
             filteredPetitions = petitions
             tableView.reloadData()
+        }
+    }
+    
+    private func setTitles() {
+        if navigationController?.tabBarItem.tag == 0 {
+            title = "Petitions"
+        } else {
+            title = "Top Rated Petitions"
         }
     }
 }
