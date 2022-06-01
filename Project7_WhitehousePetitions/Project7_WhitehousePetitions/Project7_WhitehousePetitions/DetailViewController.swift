@@ -26,7 +26,12 @@ class DetailViewController: UIViewController {
             <html>
             <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style> body { font-size: 150%; } </style>
+            <style> body {
+                font-size: 150%;
+                background-image:linear-gradient(30deg,green,orange,black);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            } </style>
             </head>
             <body>
             \(detailItem.body)
