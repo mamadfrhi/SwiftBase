@@ -81,12 +81,20 @@ extension ViewController {
                                    preferredStyle: .alert)
         ac.addTextField()
         
-        let action = UIAlertAction(title: "Search",
-                                   style: .default) { [weak ac, weak self] _ in
+        let searchAction = UIAlertAction(title: "Search",
+                                   style: .cancel) { [weak ac, weak self] _ in
             guard let searchValue = ac?.textFields?[0].text else { return }
             self?.search(searchValue)
         }
-        ac.addAction(action)
+        let resetSearchAction = UIAlertAction(title: "Reset search",
+                                              style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            self.filteredPetitions = self.petitions
+            self.tableView.reloadData()
+        }
+        
+        ac.addAction(searchAction)
+        ac.addAction(resetSearchAction)
         present(ac, animated: true)
     }
     
