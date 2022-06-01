@@ -20,7 +20,7 @@ https://user-images.githubusercontent.com/28094207/171410643-bd66aa56-9f7d-4409-
 
 ## [Project6_b](https://github.com/mamadfrhi/SwiftBase/tree/main/Project6_AutoLayout/Project6_a)
 
-Added resizeable dynamic UIViews on the ViewController using both `VFL` and `NSLayoutConstraint`
+Added resizeable dynamic `UIViews` on the `ViewController` using both `VFL` and `NSLayoutConstraint`
 
 ### Showcase 📱
 
