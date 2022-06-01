@@ -141,7 +141,14 @@ class ViewController: UIViewController {
         for label in [label1, label2, label3, label4, label5] {
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
             label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-            label.heightAnchor.constraint(equalToConstant: 88).isActive = true
+            
+            let spaceBetweenLabels = 10.0
+            label.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor,
+                                          multiplier: 0.2,
+                                          constant: -spaceBetweenLabels).isActive = true
+            // it🔝 means:
+            // each label's height should be 1/5 or 0.2 OF THE safe area's height
+            // minus space between labels
             
             if let previousLabel = previousLabel {
                 label.topAnchor.constraint(equalTo: previousLabel.bottomAnchor, constant: 10).isActive = true
@@ -154,8 +161,6 @@ class ViewController: UIViewController {
     }
 }
 
-// do the challenges and questions
 // https://www.youtube.com/watch?v=z7EvsqDwcT4
 // https://www.hackingwithswift.com/read/6/overview
-
 
