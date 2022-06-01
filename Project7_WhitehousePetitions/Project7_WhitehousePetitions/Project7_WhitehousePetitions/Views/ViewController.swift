@@ -18,7 +18,10 @@ class ViewController: UITableViewController {
         fetchData()
         setTitles()
     }
-    
+}
+
+// MARK: Prepare VC
+extension ViewController {
     private func fetchData() {
         let urlString : String
         
