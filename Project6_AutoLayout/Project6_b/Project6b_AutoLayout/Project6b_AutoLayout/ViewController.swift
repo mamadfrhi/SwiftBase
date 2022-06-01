@@ -61,16 +61,25 @@ class ViewController: UIViewController {
         ]
         
         for label in viewsDictionary.keys {
-            // | or pipe sign means edge of the view(here means ViewController.view)
-            // [] or brackets means edges of the view(here means label)
+            // | or pipe sign means edge of the parent view(here means ViewController.view)
+            // [] or brackets means edges of the control's view(here means label)
             //                                                                           H means Horizontal NOT Height!
             view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|",
                                                                metrics: nil,
                                                                views: viewsDictionary))
         }
+        
+        let metrics = ["labelHeight" : 88]
+        
+        //                                                              V means Vertical
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
+                                                            "V:|[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]-(>=10)-|",
+                                                           options: [],
+                                                           metrics: metrics,
+                                                           views: viewsDictionary))
+        
         // |s works like above
         // - or dash make 10 points space between views by default
-        //                                                              V means Vertical
         // [label1(==88)] ,,, (==88) within [] means make labels' size equal 88
         // -(<=10)-| means make space FROM last label to the END of the screen grater than 10
         // when we want specify the size of the space(-), we must specify dashes before and after the size
@@ -80,18 +89,13 @@ class ViewController: UIViewController {
         // 1000 means absolutely required, anything less than that is optional
         // it can be add to the constraints by @1-1000
         
-        // here @999 added to the first label to make its size optional
-        // in order to make it compatible with landscape mode
-        // Then, copy other labels' sizes from the first 1,
-        // to prevent just first label from size changing unevenly
-        
-        let metrics = ["labelHeight" : 88]
-        
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
-                                                            "V:|[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]-(>=10)-|",
-                                                           options: [],
-                                                           metrics: metrics,
-                                                           views: viewsDictionary))
+        // here @999 added to the first label to make its Vertical size optional
+        // in order to make it compatible with landscape mode.
+        // (@999) means if the constraints engine would need to change size of the label, it CAN.
+        // Then, copy other labels' sizes from the first label.
+        // By this condition the constraint engine can change Vertical size of the first label
+        // and make other labels' Vertical size equal to the first label.
+        // So, all of the labels will spread over the view evenly.
     }
     
     private func addLabelsUsingAnchors() {
@@ -148,5 +152,9 @@ class ViewController: UIViewController {
         }
     }
 }
+
+// do the challenges and questions
+// https://www.youtube.com/watch?v=z7EvsqDwcT4
+// https://www.hackingwithswift.com/read/6/overview
 
 
