@@ -17,6 +17,8 @@ These project's base are from [hackingwithswift.com ](https://www.hackingwithswi
 
 [Project 6: Auto Layout](https://github.com/mamadfrhi/SwiftBase/tree/main/Project6_AutoLayout)
 
+[Project 7: Whitehouse Petitions](https://github.com/mamadfrhi/SwiftBase/tree/main/Project7_WhitehousePetitions)
+
 [Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
 
 ## [SwiftUI](https://www.hackingwithswift.com/100/swiftui)
