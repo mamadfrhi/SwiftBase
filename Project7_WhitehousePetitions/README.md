@@ -2,21 +2,12 @@
 
 ## Learned Concepts ☺️
 
-* UIAlertController
-* UIButton
-* CALayer
-* UIColor
-* Outlets
-* Asset catalogs
-* Interface Builder
-* Random numbers
-* Auto Layout
-* Actions
+* [Codable](https://developer.apple.com/documentation/swift/codable)
+* [UITabBarController](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
+* [UIStoryboard](https://developer.apple.com/documentation/uikit/uistoryboard)
+* Downloading JSON with [Data type](https://developer.apple.com/documentation/foundation/data)
  
 
 
 ## Showcase 📱
-
-
-https://user-images.githubusercontent.com/28094207/169885580-30ceb6f7-2055-4882-82dd-90dd1f417cac.mov
 
