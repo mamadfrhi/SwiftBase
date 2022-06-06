@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     private var scoreLabel: UILabel!
     private var letterButtons = [UIButton]()
     
+    private var activatedButtons = [UIButton]()
+    private var solutions = [String]()
+    
+    private var score = 0
+    private var level = 1
+    
     override func loadView() {
         view = UIView()
         view.backgroundColor = .white
@@ -40,6 +46,9 @@ class ViewController: UIViewController {
         answersLabel.textAlignment = .right
         answersLabel.numberOfLines = 0
         answersLabel.setContentHuggingPriority(UILayoutPriority(1), for: .vertical)
+        //                     👆🏼Hugging => content does not want to grow
+        // answersLabel.contentCompressionResistancePriority(for: .vertical)
+        //                     👆🏼Compression Resistance => content does not want to shrink
         view.addSubview(answersLabel)
         
         currentAnswer = UITextField()
@@ -53,18 +62,25 @@ class ViewController: UIViewController {
         let submit = UIButton(type: .system)
         submit.translatesAutoresizingMaskIntoConstraints = false
         submit.setTitle("SUBMIT", for: .normal)
+        submit.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
         view.addSubview(submit)
         
         let clear = UIButton(type: .system)
         clear.translatesAutoresizingMaskIntoConstraints = false
         clear.setTitle("CLEAR", for: .normal)
+        clear.addTarget(self, action: #selector(clearTapped), for: .touchUpInside)
         view.addSubview(clear)
         
         let buttonsView = UIView()
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(buttonsView)
         
-        NSLayoutConstraint.activate( // margin is out of safeArea
+        // margin means 8-10 points inner or outer
+        // from a edge of a view
+        // e.g.     safeArea          .leadingAnchor is exactly at the very left of the view
+        // HOWEVER, layoutMarginsGuide.leadingAnchor is exactly at the very left of the view + 8 points
+        
+        NSLayoutConstraint.activate(
             [
                 scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
                 scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
@@ -106,6 +122,7 @@ class ViewController: UIViewController {
                 let letterButton = UIButton(type: .system)
                 letterButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
                 letterButton.setTitle("WWW", for: .normal)
+                letterButton.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
                 
                 let frame = CGRect(x: buttonWidth * column, y: buttonHeight * row,
                                    width: buttonWidth, height: buttonHeight)
@@ -115,27 +132,68 @@ class ViewController: UIViewController {
                 letterButtons.append(letterButton)
             }
         }
-        
-        cluesLabel.backgroundColor = .red
-        answersLabel.backgroundColor = .blue
-        submit.backgroundColor = .green
-        clear.backgroundColor = .yellow
-        
-        buttonsView.backgroundColor = .black
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        loadLevel()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print(view.frame.size)
+    private func loadLevel() {
+        var clueString = ""
+        var solutionsString = ""
+        var letterBits = [String]()
+        
+        if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") {
+            if let levelContents = try? String(contentsOf: levelFileURL) {
+                var lines = levelContents.components(separatedBy: "\n")
+                lines.shuffle()
+                
+                for (index, line) in lines.enumerated() {
+                    let parts = line.components(separatedBy: ": ")
+                    let answers = parts[0]
+                    let clue = parts[1]
+                    
+                    clueString += "\(index + 1). \(clue)\n"
+                    
+                    let solutionWord = answers.replacingOccurrences(of: "|", with: "")
+                    solutionsString += "\(solutionWord.count) letters\n"
+                    solutions.append(solutionWord)
+                    
+                    let bits = answers.components(separatedBy: "|")
+                    letterBits += bits
+                }
+            }
+        }
+        
+        cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines) // it removes \n or space from the very end of the string
+        answersLabel.text = solutionsString.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if letterButtons.count == letterBits.count {
+            for i in 0 ..< letterButtons.count {
+                let button = letterButtons[i]
+                let title = letterBits[i]
+                button.setTitle(title, for: .normal)
+            }
+        }
     }
 }
 
-// https://youtu.be/yhxhKpyyQzE?t=801
+// MARK: UIButton Actions
+extension ViewController {
+    @objc private func letterTapped(_ sender: UIButton) {
+        
+    }
+    
+    @objc private func submitTapped(_ sender: UIButton) {
+        
+    }
+    
+    @objc private func clearTapped(_ sender: UIButton) {
+        
+    }
+}
+
+// https://www.youtube.com/watch?v=InHeXXy3NFc
 // Content Hugging Priority =
 // view resists being made larger than its intrinsic size - high means AutoLayout refers to NOT streach it.
 // default = 250

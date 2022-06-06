@@ -14,6 +14,9 @@
 		87119159284A36F2001AFBD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87119158284A36F2001AFBD7 /* Assets.xcassets */; };
 		8711915C284A36F2001AFBD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8711915A284A36F2001AFBD7 /* LaunchScreen.storyboard */; };
 		876E8B65284A3CE000FF098C /* final view.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 876E8B64284A3CE000FF098C /* final view.jpg */; };
+		87F768C4284DDB780082DD1C /* iOS Auto Layout.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 87F768C3284DDB780082DD1C /* iOS Auto Layout.jpeg */; };
+		87F768C7284DDE400082DD1C /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87F768C5284DDE3F0082DD1C /* level1.txt */; };
+		87F768C8284DDE400082DD1C /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87F768C6284DDE400082DD1C /* level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		8711915B284A36F2001AFBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8711915D284A36F2001AFBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		876E8B64284A3CE000FF098C /* final view.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "final view.jpg"; sourceTree = "<group>"; };
+		87F768C3284DDB780082DD1C /* iOS Auto Layout.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iOS Auto Layout.jpeg"; sourceTree = "<group>"; };
+		87F768C5284DDE3F0082DD1C /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		87F768C6284DDE400082DD1C /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +71,10 @@
 				87119158284A36F2001AFBD7 /* Assets.xcassets */,
 				8711915A284A36F2001AFBD7 /* LaunchScreen.storyboard */,
 				8711915D284A36F2001AFBD7 /* Info.plist */,
+				87F768C5284DDE3F0082DD1C /* level1.txt */,
+				87F768C6284DDE400082DD1C /* level2.txt */,
 				876E8B64284A3CE000FF098C /* final view.jpg */,
+				87F768C3284DDB780082DD1C /* iOS Auto Layout.jpeg */,
 			);
 			path = Project8_7SwiftyWords;
 			sourceTree = "<group>";
@@ -129,9 +138,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8711915C284A36F2001AFBD7 /* LaunchScreen.storyboard in Resources */,
+				87F768C8284DDE400082DD1C /* level2.txt in Resources */,
 				87119159284A36F2001AFBD7 /* Assets.xcassets in Resources */,
 				876E8B65284A3CE000FF098C /* final view.jpg in Resources */,
+				87F768C7284DDE400082DD1C /* level1.txt in Resources */,
 				87119157284A36F1001AFBD7 /* Main.storyboard in Resources */,
+				87F768C4284DDB780082DD1C /* iOS Auto Layout.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
