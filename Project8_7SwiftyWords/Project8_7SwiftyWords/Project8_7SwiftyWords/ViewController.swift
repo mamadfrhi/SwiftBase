@@ -93,7 +93,6 @@ extension ViewController {
 
 // MARK: UIAlert Actions
 extension ViewController {
-    
     @objc private func levelUp(action: UIAlertAction) {
         level += 1
         
@@ -243,16 +242,22 @@ extension ViewController {
     @objc private func submitTapped(_ sender: UIButton) {
         guard let answerText = currentAnswer.text else { return }
         
-        if let solutionPosition = solutions.firstIndex(of: answerText) {
-            var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
-            splitAnswers?[solutionPosition] = answerText
-            answersLabel.text = splitAnswers?.joined(separator: "\n")
+        if let solutionPosition = solutions.firstIndex(of: answerText) { // correct
             
             currentAnswer.text = ""
             score += 1
             correctAnswers += 1
             
+            activatedButtons.removeAll()
+            
+            // update answersLabel
+            var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
+            splitAnswers?[solutionPosition] = answerText
+            answersLabel.text = splitAnswers?.joined(separator: "\n")
+            
+            
             if correctAnswers == solutions.count {
+                // show alert
                 let ac = UIAlertController(title: "Well done!",
                                            message: "Are you ready for the next level?",
                                            preferredStyle: .alert)
@@ -261,7 +266,7 @@ extension ViewController {
                                            handler: levelUp))
                 present(ac, animated: true)
             }
-        } else {
+        } else { // false
             score -= 0.5
             let ac = UIAlertController(title: "No no no!",
                                        message: "Entered solutions isn't correct!",
