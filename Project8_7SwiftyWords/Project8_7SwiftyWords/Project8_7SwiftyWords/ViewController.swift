@@ -19,7 +19,11 @@ class ViewController: UIViewController {
     private var activatedButtons = [UIButton]()
     private var solutions = [String]()
     
-    private var score = 0
+    private var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     private var level = 1
 }
 
