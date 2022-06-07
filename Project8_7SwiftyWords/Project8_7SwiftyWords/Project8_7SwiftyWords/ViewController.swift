@@ -21,10 +21,7 @@ class ViewController: UIViewController {
     private var score = 0
     private var level = 1
     
-    override func loadView() {
-        view = UIView()
-        view.backgroundColor = .white
-        
+    private func addLabels() {
         scoreLabel = UILabel()
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         scoreLabel.textAlignment = .right
@@ -50,7 +47,9 @@ class ViewController: UIViewController {
         // answersLabel.contentCompressionResistancePriority(for: .vertical)
         //                     👆🏼Compression Resistance => content does not want to shrink
         view.addSubview(answersLabel)
-        
+    }
+    
+    private func addAnswerTextField() {
         currentAnswer = UITextField()
         currentAnswer.translatesAutoresizingMaskIntoConstraints = false
         currentAnswer.placeholder = "Tap letters to guess"
@@ -58,7 +57,9 @@ class ViewController: UIViewController {
         currentAnswer.font = UIFont.systemFont(ofSize: 44)
         currentAnswer.isUserInteractionEnabled = false
         view.addSubview(currentAnswer)
-        
+    }
+    
+    private func addConstraintsAndButtons() {
         let submit = UIButton(type: .system)
         submit.translatesAutoresizingMaskIntoConstraints = false
         submit.setTitle("SUBMIT", for: .normal)
@@ -133,6 +134,15 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func loadView() {
+        view = UIView()
+        view.backgroundColor = .white
+        
+        addLabels()
+        addAnswerTextField()
+        addConstraintsAndButtons()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         loadLevel()
@@ -195,7 +205,7 @@ extension ViewController {
 
 // https://www.youtube.com/watch?v=InHeXXy3NFc
 // Content Hugging Priority =
-// view resists being made larger than its intrinsic size - high means AutoLayout refers to NOT streach it.
+// view resists being made larger than its intrinsic size - high means AutoLayout prefers to NOT streach it.
 // default = 250
 
 // Content Compression Resistance Priority =
