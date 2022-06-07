@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: Properties
     private var cluesLabel: UILabel!
     private var answersLabel: UILabel!
     private var currentAnswer: UITextField!
@@ -21,6 +22,61 @@ class ViewController: UIViewController {
     private var score = 0
     private var level = 1
     
+    override func loadView() {
+        view = UIView()
+        view.backgroundColor = .white
+        
+        addLabels()
+        addAnswerTextField()
+        addConstraintsAndButtons()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadLevel()
+    }
+    
+    private func loadLevel() {
+        var clueString = ""
+        var solutionsString = ""
+        var letterBits = [String]()
+        
+        if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") {
+            if let levelContents = try? String(contentsOf: levelFileURL) {
+                var lines = levelContents.components(separatedBy: "\n")
+                lines.shuffle()
+                
+                for (index, line) in lines.enumerated() {
+                    let parts = line.components(separatedBy: ": ")
+                    let answers = parts[0]
+                    let clue = parts[1]
+                    
+                    clueString += "\(index + 1). \(clue)\n"
+                    
+                    let solutionWord = answers.replacingOccurrences(of: "|", with: "")
+                    solutionsString += "\(solutionWord.count) letters\n"
+                    solutions.append(solutionWord)
+                    
+                    let bits = answers.components(separatedBy: "|")
+                    letterBits += bits
+                }
+            }
+        }
+        
+        cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines) // it removes \n or space from the very end of the string
+        answersLabel.text = solutionsString.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if letterButtons.count == letterBits.count {
+            for i in 0 ..< letterButtons.count {
+                let button = letterButtons[i]
+                let title = letterBits[i]
+                button.setTitle(title, for: .normal)
+            }
+        }
+    }
+}
+
+// MARK: - Add views
+extension ViewController {
     private func addLabels() {
         scoreLabel = UILabel()
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -111,7 +167,7 @@ class ViewController: UIViewController {
                 buttonsView.heightAnchor.constraint(equalToConstant: 320),
                 buttonsView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 buttonsView.topAnchor.constraint(equalTo: submit.bottomAnchor, constant: 20),
-                buttonsView.bottomAnchor.constraint(greaterThanOrEqualTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
+                buttonsView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
             ]
         )
         
@@ -134,61 +190,9 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    override func loadView() {
-        view = UIView()
-        view.backgroundColor = .white
-        
-        addLabels()
-        addAnswerTextField()
-        addConstraintsAndButtons()
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadLevel()
-    }
-    
-    private func loadLevel() {
-        var clueString = ""
-        var solutionsString = ""
-        var letterBits = [String]()
-        
-        if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") {
-            if let levelContents = try? String(contentsOf: levelFileURL) {
-                var lines = levelContents.components(separatedBy: "\n")
-                lines.shuffle()
-                
-                for (index, line) in lines.enumerated() {
-                    let parts = line.components(separatedBy: ": ")
-                    let answers = parts[0]
-                    let clue = parts[1]
-                    
-                    clueString += "\(index + 1). \(clue)\n"
-                    
-                    let solutionWord = answers.replacingOccurrences(of: "|", with: "")
-                    solutionsString += "\(solutionWord.count) letters\n"
-                    solutions.append(solutionWord)
-                    
-                    let bits = answers.components(separatedBy: "|")
-                    letterBits += bits
-                }
-            }
-        }
-        
-        cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines) // it removes \n or space from the very end of the string
-        answersLabel.text = solutionsString.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        if letterButtons.count == letterBits.count {
-            for i in 0 ..< letterButtons.count {
-                let button = letterButtons[i]
-                let title = letterBits[i]
-                button.setTitle(title, for: .normal)
-            }
-        }
-    }
 }
 
-// MARK: UIButton Actions
+// MARK: - UIButton Actions
 extension ViewController {
     @objc private func letterTapped(_ sender: UIButton) {
         
