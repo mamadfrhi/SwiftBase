@@ -2,6 +2,7 @@
 
 ## Learned Concepts ☺️
 
+* Develop iPad apps!
 * [UIKit](https://developer.apple.com/documentation/uikit) controls in code
 * Constraints + Anchors + AutoLayout in code
 * [addTarget()](https://developer.apple.com/documentation/uikit/uigesturerecognizer/1624230-addtarget)
