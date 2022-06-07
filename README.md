@@ -19,6 +19,8 @@ These project's base are from [hackingwithswift.com ](https://www.hackingwithswi
 
 [Project 7: Whitehouse Petitions](https://github.com/mamadfrhi/SwiftBase/tree/main/Project7_WhitehousePetitions)
 
+[Project 8: 7 Swifty Words](https://github.com/mamadfrhi/SwiftBase/tree/main/Project8_7SwiftyWords)
+
 [Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
 
 ## [SwiftUI](https://www.hackingwithswift.com/100/swiftui)
