@@ -19,12 +19,14 @@ class ViewController: UIViewController {
     private var activatedButtons = [UIButton]()
     private var solutions = [String]()
     
-    private var score = 0 {
+    private var score = 0.0 {
         didSet {
+            if score < 0 { score = 0 }
             scoreLabel.text = "Score: \(score)"
         }
     }
     private var level = 1
+    private var correctAnswers = 0
 }
 
 // MARK: LifeCycle
@@ -248,8 +250,9 @@ extension ViewController {
             
             currentAnswer.text = ""
             score += 1
+            correctAnswers += 1
             
-            if score % 7 == 0 {
+            if correctAnswers == solutions.count {
                 let ac = UIAlertController(title: "Well done!",
                                            message: "Are you ready for the next level?",
                                            preferredStyle: .alert)
@@ -259,6 +262,7 @@ extension ViewController {
                 present(ac, animated: true)
             }
         } else {
+            score -= 0.5
             let ac = UIAlertController(title: "No no no!",
                                        message: "Entered solutions isn't correct!",
                                        preferredStyle: .alert)
