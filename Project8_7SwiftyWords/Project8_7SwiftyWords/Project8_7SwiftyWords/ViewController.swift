@@ -87,6 +87,10 @@ extension ViewController {
             }
         }
     }
+}
+
+// MARK: UIAlert Actions
+extension ViewController {
     
     @objc private func levelUp(action: UIAlertAction) {
         level += 1
@@ -97,6 +101,10 @@ extension ViewController {
         for button in letterButtons {
             button.isHidden = false
         }
+    }
+    
+    @objc private func tryAgainTapped(action: UIAlertAction) {
+        clearTapped(UIButton())
     }
 }
 
@@ -155,6 +163,8 @@ extension ViewController {
         
         let buttonsView = UIView()
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
+        buttonsView.layer.borderWidth = 1
+        buttonsView.layer.borderColor = UIColor.gray.cgColor
         view.addSubview(buttonsView)
         
         // margin means 8-10 points inner or outer
@@ -199,6 +209,7 @@ extension ViewController {
         let buttonHeight = 80
         let buttonWidth = 150
         
+        // create 20 buttons as a 4x5 grid
         for row in 0 ..< 4 {
             for column in 0 ..< 5 {
                 let letterButton = UIButton(type: .system)
@@ -247,6 +258,14 @@ extension ViewController {
                                            handler: levelUp))
                 present(ac, animated: true)
             }
+        } else {
+            let ac = UIAlertController(title: "No no no!",
+                                       message: "Entered solutions isn't correct!",
+                                       preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Try again.",
+                                       style: .default,
+                                       handler: tryAgainTapped))
+            present(ac, animated: true)
         }
     }
     
@@ -263,7 +282,7 @@ extension ViewController {
 
 // https://www.youtube.com/watch?v=InHeXXy3NFc
 // Content Hugging Priority =
-// view resists being made larger than its intrinsic size - high means AutoLayout prefers to NOT streach it.
+// view resists being made larger than its intrinsic size - high means AutoLayout prefers to NOT stretch it.
 // default = 250
 
 // Content Compression Resistance Priority =
@@ -271,3 +290,7 @@ extension ViewController {
 // default = 750
 
 // Higher priorities means AutoLayout tries hard to satisfy them
+
+
+// layoutMarginsGuide is inside the safeAreaLayoutGuide, so it will be slightly smaller.
+
