@@ -47,7 +47,7 @@ extension ViewController {
             petitions = jsonPetitions.results
             filteredPetitions = petitions
             
-            tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: false, waitUntilDone: false)
+            tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
         } else {
             performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
         }

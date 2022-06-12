@@ -2,10 +2,9 @@
 
 ## Learned Concepts ☺️
 
-* [Codable](https://developer.apple.com/documentation/swift/codable)
-* [UITabBarController](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
-* [UIStoryboard](https://developer.apple.com/documentation/uikit/uistoryboard)
-* Downloading JSON with [Data type](https://developer.apple.com/documentation/foundation/data)
+* [GCD](https://de.wikipedia.org/wiki/Grand_Central_Dispatch)
+* [performSelector()](https://developer.apple.com/documentation/objectivec/1418956-nsobject/1418764-performselector)
+* Quality of Service
  
 
 
