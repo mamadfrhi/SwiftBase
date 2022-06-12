@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     private var currentAnswer: UITextField!
     private var scoreLabel: UILabel!
     private var letterButtons = [UIButton]()
+    private var buttonsView : UIView!
     
     private var activatedButtons = [UIButton]()
     private var solutions = [String]()
@@ -38,7 +39,8 @@ extension ViewController {
         
         addLabels()
         addAnswerTextField()
-        addConstraintsAndButtons()
+        addConstraints()
+        addAnswerButtons()
     }
     
     override func viewDidLoad() {
@@ -115,7 +117,6 @@ extension ViewController {
         scoreLabel = UILabel()
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         scoreLabel.textAlignment = .right
-        scoreLabel.text = "Score: 0"
         view.addSubview(scoreLabel)
         
         cluesLabel = UILabel()
@@ -133,9 +134,9 @@ extension ViewController {
         answersLabel.textAlignment = .right
         answersLabel.numberOfLines = 0
         answersLabel.setContentHuggingPriority(UILayoutPriority(1), for: .vertical)
-        //                     👆🏼Hugging => content does not want to grow
+        //                     👆🏼Hugging => view prevents to grow
         // answersLabel.contentCompressionResistancePriority(for: .vertical)
-        //                     👆🏼Compression Resistance => content does not want to shrink
+        //                     👆🏼Compression Resistance => view prevents to shrink
         view.addSubview(answersLabel)
     }
     
@@ -149,7 +150,7 @@ extension ViewController {
         view.addSubview(currentAnswer)
     }
     
-    private func addConstraintsAndButtons() {
+    private func addConstraints() {
         let submit = UIButton(type: .system)
         submit.translatesAutoresizingMaskIntoConstraints = false
         submit.setTitle("SUBMIT", for: .normal)
@@ -162,7 +163,7 @@ extension ViewController {
         clear.addTarget(self, action: #selector(clearTapped), for: .touchUpInside)
         view.addSubview(clear)
         
-        let buttonsView = UIView()
+        buttonsView = UIView()
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
         buttonsView.layer.borderWidth = 1
         buttonsView.layer.borderColor = UIColor.gray.cgColor
@@ -206,6 +207,9 @@ extension ViewController {
                 buttonsView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
             ]
         )
+    }
+    
+    private func addAnswerButtons() {
         
         let buttonHeight = 80
         let buttonWidth = 150
@@ -290,12 +294,13 @@ extension ViewController {
 }
 
 // https://www.youtube.com/watch?v=InHeXXy3NFc
+// *************** Good Tips ***************
 // Content Hugging Priority =
-// view resists being made larger than its intrinsic size - high means AutoLayout prefers to NOT stretch it.
+// view resists to resize larger than its intrinsic size - high means AutoLayout prefers to NOT stretch it.
 // default = 250
 
 // Content Compression Resistance Priority =
-// view resists being made smaller than its intrinsic size
+// view resists to resize smaller than its intrinsic size
 // default = 750
 
 // Higher priorities means AutoLayout tries hard to satisfy them
