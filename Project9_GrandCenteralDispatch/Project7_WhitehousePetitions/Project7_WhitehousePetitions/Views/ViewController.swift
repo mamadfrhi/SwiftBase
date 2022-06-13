@@ -10,7 +10,12 @@ import UIKit
 class ViewController: UITableViewController {
     
     private var petitions = [Petition]()
-    private var filteredPetitions = [Petition]()
+    private var filteredPetitions = [Petition]() {
+        didSet {
+            tableView.performSelector(onMainThread: #selector(UITableView.reloadData),
+                            with: nil, waitUntilDone: false)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,15 +105,16 @@ extension ViewController {
         ac.addTextField()
         
         let searchAction = UIAlertAction(title: "Search",
-                                         style: .cancel) { [weak ac, weak self] _ in
-            guard let searchValue = ac?.textFields?[0].text else { return }
-            self?.search(searchValue)
+                                         style: .cancel) {
+            [weak ac, weak self] _ in
+            guard let self = self, let searchValue = ac?.textFields?[0].text else { return }
+            
+            self.performSelector(inBackground: #selector(self.search), with: searchValue)
         }
         let resetSearchAction = UIAlertAction(title: "Reset search",
                                               style: .default) { [weak self] _ in
             guard let self = self else { return }
             self.filteredPetitions = self.petitions
-            self.tableView.reloadData()
         }
         
         ac.addAction(searchAction)
@@ -124,11 +130,12 @@ extension ViewController {
         present(ac, animated: true)
     }
     
-    @objc private func search(_ value: String) {
-        filteredPetitions = petitions.filter{
-            $0.body.contains(value) ? true : false
+    @objc private func search(_ value: Any) {
+        if let searchValue = value as? String {
+            filteredPetitions = petitions.filter {
+                $0.body.contains(searchValue) ? true : false
+            }
         }
-        tableView.reloadData()
     }
 }
 
