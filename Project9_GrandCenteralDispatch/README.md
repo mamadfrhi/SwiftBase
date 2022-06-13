@@ -1,4 +1,5 @@
-
+## Isn't it duplicate? 🤨
+No! This project reused to learn GCD and background threading methods in the project. Background fetching and parallel programming applied on this project as well as project 7 and 8.
 
 ## Learned Concepts ☺️
 
