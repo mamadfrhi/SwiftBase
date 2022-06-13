@@ -52,36 +52,58 @@ extension ViewController {
 // MARK: Leveling
 extension ViewController {
     private func loadLevel() {
-        var clueString = ""
-        var solutionsString = ""
-        var letterBits = [String]()
-        
-        if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") {
-            if let levelContents = try? String(contentsOf: levelFileURL) {
-                var lines = levelContents.components(separatedBy: "\n")
-                lines.shuffle()
-                
-                for (index, line) in lines.enumerated() {
-                    let parts = line.components(separatedBy: ": ")
-                    let answers = parts[0]
-                    let clue = parts[1]
+        DispatchQueue.global(qos: .userInteractive).async {
+            [weak self] in guard let self = self else { return }
+            
+            var clueString = ""
+            var solutionsString = ""
+            var letterBits = [String]()
+            
+            if let levelFileURL = Bundle.main.url(forResource: "level\(self.level)", withExtension: "txt") {
+                if let levelContents = try? String(contentsOf: levelFileURL) {
+                    var lines = levelContents.components(separatedBy: "\n")
+                    lines.shuffle()
                     
-                    clueString += "\(index + 1). \(clue)\n"
-                    
-                    let solutionWord = answers.replacingOccurrences(of: "|", with: "")
-                    solutionsString += "\(solutionWord.count) letters\n"
-                    solutions.append(solutionWord)
-                    
-                    let bits = answers.components(separatedBy: "|")
-                    letterBits += bits
+                    for (index, line) in lines.enumerated() {
+                        let parts = line.components(separatedBy: ": ")
+                        let answers = parts[0]
+                        let clue = parts[1]
+                        
+                        clueString += "\(index + 1). \(clue)\n"
+                        
+                        let solutionWord = answers.replacingOccurrences(of: "|", with: "")
+                        solutionsString += "\(solutionWord.count) letters\n"
+                        self.solutions.append(solutionWord)
+                        
+                        let bits = answers.components(separatedBy: "|")
+                        letterBits += bits
+                    }
                 }
             }
+            
+            letterBits.shuffle()
+            
+            let cluesLabelText = clueString.trimmingCharacters(in: .whitespacesAndNewlines) // it removes \n or space from the very end of the string
+            let answersLabelText = solutionsString.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let labelsTextsTuple = (cluesLabelText, answersLabelText)
+
+            
+            self.performSelector(onMainThread: #selector(self.setLabelText(labelsTextsTuple:)), with: labelsTextsTuple, waitUntilDone: false)
+            self.performSelector(onMainThread: #selector(self.setButtonsTexts(letterBits:)), with: letterBits, waitUntilDone: false)
         }
+    }
+    
+    @objc private func setLabelText(labelsTextsTuple: (Any)) {
+        if let labelsTextsTuple = labelsTextsTuple as? (String, String) {
+            cluesLabel.text = labelsTextsTuple.0
+            answersLabel.text = labelsTextsTuple.1
+        }
+    }
+    
+    @objc private func setButtonsTexts(letterBits: Any) {
         
-        cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines) // it removes \n or space from the very end of the string
-        answersLabel.text = solutionsString.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        letterBits.shuffle()
+        guard let letterBits = letterBits as? [String] else { return }
         
         if letterButtons.count == letterBits.count {
             for i in 0 ..< letterButtons.count {
