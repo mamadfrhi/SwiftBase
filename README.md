@@ -21,6 +21,8 @@ These project's base are from [hackingwithswift.com ](https://www.hackingwithswi
 
 [Project 8: 7 Swifty Words](https://github.com/mamadfrhi/SwiftBase/tree/main/Project8_7SwiftyWords)
 
+[Project 9: 7 Grand Centeral Dispatch(GCD)](https://github.com/mamadfrhi/SwiftBase/tree/main/Project9_GrandCenteralDispatch)
+
 [Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
 
 ## [SwiftUI](https://www.hackingwithswift.com/100/swiftui)
