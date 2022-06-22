@@ -5,29 +5,29 @@ The UIKit projects in this section are contain implementations from [hackingwith
 
 ## [UIKit](https://www.hackingwithswift.com/100)
 
-[Project 1: Storm Viewer](https://github.com/mamadfrhi/SwiftBase/tree/main/Project1_StormViewer)
+[Project 1: Storm Viewer](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject1_StormViewer)
 
-[Project 2: Guess The Flag](https://github.com/mamadfrhi/SwiftBase/tree/main/Project2_GuessTheFlag)
+[Project 2: Guess The Flag](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject2_GuessTheFlag)
 
-[Project 3: Social Media](https://github.com/mamadfrhi/SwiftBase/tree/main/Project3_SocialMedia)
+[Project 3: Social Media](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject3_SocialMedia)
 
-[Project 4: Easy Browser](https://github.com/mamadfrhi/SwiftBase/tree/main/Project4_EasyBrowser)
+[Project 4: Easy Browser](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject4_EasyBrowser)
 
-[Project 5: Word Scramble](https://github.com/mamadfrhi/SwiftBase/tree/main/Project5_WordScramble)
+[Project 5: Word Scramble](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject5_WordScramble)
 
-[Project 6: Auto Layout](https://github.com/mamadfrhi/SwiftBase/tree/main/Project6_AutoLayout)
+[Project 6: Auto Layout](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject6_AutoLayout)
 
-[Project 7: Whitehouse Petitions](https://github.com/mamadfrhi/SwiftBase/tree/main/Project7_WhitehousePetitions)
+[Project 7: Whitehouse Petitions](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject7_WhitehousePetitions)
 
-[Project 8: 7 Swifty Words](https://github.com/mamadfrhi/SwiftBase/tree/main/Project8_7SwiftyWords)
+[Project 8: 7 Swifty Words](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject8_7SwiftyWords)
 
-[Project 9: Grand Centeral Dispatch(GCD)](https://github.com/mamadfrhi/SwiftBase/tree/main/Project9_GrandCenteralDispatch)
+[Project 9: Grand Centeral Dispatch(GCD)](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject9_GrandCenteralDispatch)
 
-[Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/Project27_CoreGraphic)
+[Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject27_CoreGraphic)
 
 
 ## [SwiftUI](https://www.hackingwithswift.com/100/swiftui)
 
 These SwiftUI projects below has been implemented from a course + my own customizations on them.
 
-[Project 1: RESTART - Advanced iOS 15 App Design with SwiftUI 3](https://github.com/mamadfrhi/SwiftBase/tree/main/Project1_Restart/)
+[Project 1: RESTART - Advanced iOS 15 App Design with SwiftUI 3](https://github.com/mamadfrhi/SwiftBase/tree/main/SwiftUI/Project1_Restart/)
