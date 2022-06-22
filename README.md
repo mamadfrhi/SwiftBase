@@ -1,29 +1,29 @@
 # SwiftBase
 
-The UIKit projects in this section are contain implementations from [hackingwithswift.com ](https://www.hackingwithswift.com/read) + code challenges that provided by the tutor + my own customization to learn the frameworks better.
+The / projects in this section are contain implementations from [hackingwithswift.com ](https://www.hackingwithswift.com/read) + code challenges that provided by the tutor + my own customization to learn the frameworks better.
 
 
 ## [UIKit](https://www.hackingwithswift.com/100)
 
-[Project 1: Storm Viewer](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject1_StormViewer)
+[Project 1: Storm Viewer](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project1_StormViewer)
 
-[Project 2: Guess The Flag](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject2_GuessTheFlag)
+[Project 2: Guess The Flag](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project2_GuessTheFlag)
 
-[Project 3: Social Media](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject3_SocialMedia)
+[Project 3: Social Media](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project3_SocialMedia)
 
-[Project 4: Easy Browser](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject4_EasyBrowser)
+[Project 4: Easy Browser](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project4_EasyBrowser)
 
-[Project 5: Word Scramble](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject5_WordScramble)
+[Project 5: Word Scramble](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project5_WordScramble)
 
-[Project 6: Auto Layout](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject6_AutoLayout)
+[Project 6: Auto Layout](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project6_AutoLayout)
 
-[Project 7: Whitehouse Petitions](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject7_WhitehousePetitions)
+[Project 7: Whitehouse Petitions](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project7_WhitehousePetitions)
 
-[Project 8: 7 Swifty Words](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject8_7SwiftyWords)
+[Project 8: 7 Swifty Words](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project8_7SwiftyWords)
 
-[Project 9: Grand Centeral Dispatch(GCD)](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject9_GrandCenteralDispatch)
+[Project 9: Grand Centeral Dispatch(GCD)](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project9_GrandCenteralDispatch)
 
-[Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKitProject27_CoreGraphic)
+[Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project27_CoreGraphic)
 
 
 ## [SwiftUI](https://www.hackingwithswift.com/100/swiftui)
