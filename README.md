@@ -30,4 +30,4 @@ The UIKit projects in this section are contain implementations from [hackingwith
 
 These SwiftUI projects below has been implemented from a course + my own customizations on them.
 
-[Project 1: RESTART - Advanced iOS 15 App Design with SwiftUI 3]()
+[Project 1: RESTART - Advanced iOS 15 App Design with SwiftUI 3](https://github.com/mamadfrhi/SwiftBase/tree/main/Project1_Restart/)
