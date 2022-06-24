@@ -1,6 +1,6 @@
 # SwiftBase
 
-The / projects in this section are contain implementations from [hackingwithswift.com ](https://www.hackingwithswift.com/read) + code challenges that provided by the tutor + my own customization to learn the frameworks better.
+These projects in this section contain implementations from [hackingwithswift.com ](https://www.hackingwithswift.com/read) + code challenges that provided by the tutor + my own customization to learn the frameworks better.
 
 
 ## [UIKit](https://www.hackingwithswift.com/100)
