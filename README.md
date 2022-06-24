@@ -1,9 +1,9 @@
-# SwiftBase
+# SwiftBase 🦅
 
 These projects in this section contain implementations from [hackingwithswift.com ](https://www.hackingwithswift.com/read) + code challenges that provided by the tutor + my own customization to learn the frameworks better.
 
 
-## [UIKit](https://www.hackingwithswift.com/100)
+## [UIKit](https://www.hackingwithswift.com/100)👴🏼
 
 [Project 1: Storm Viewer](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project1_StormViewer)
 
@@ -26,7 +26,7 @@ These projects in this section contain implementations from [hackingwithswift.co
 [Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project27_CoreGraphic)
 
 
-## [SwiftUI](https://developer.apple.com/xcode/swiftui/)
+## [SwiftUI](https://developer.apple.com/xcode/swiftui/)🤩
 
 These SwiftUI projects below has been implemented from a course + my own customizations on them.
 
