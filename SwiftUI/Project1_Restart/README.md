@@ -1,9 +1,42 @@
-## Learned Concepts ☺️
+## Learned ☺️
 
-* [GCD](https://de.wikipedia.org/wiki/Grand_Central_Dispatch)
-* [performSelector()](https://developer.apple.com/documentation/objectivec/1418956-nsobject/1418764-performselector)
-* Quality of Service
- 
+* [AVAudioPlayer]()
+
+### Wrappers
+* @AppStorage
+* @State
+
+### Controls
+* Capsule()
+* Circle()
+* Image()
+* Text()
+* DragGesture()
+* Animation()
+* V H Z Stacks!
+* Spacer()
+* Button()
+
+### Modifiers
+* .offset()
+* .animation()
+* .opacity()
+* .padding()
+* .blur()
+* .gesture()
+* .rotationEffect()
+* .overlay()
+* .font()
+* .frame()
+* .withAnimation(){}
+* .onAppear(perform: {})
+* .preferredColorScheme(.dark)
+* .buttonStyle()
+* .buttonBorderShape()
+* .controlSize()
+
+
+
 
 
 ## Showcase 📱
