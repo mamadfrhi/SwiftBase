@@ -1,6 +1,6 @@
 # SwiftBase
 
-The / projects in this section are contain implementations from [hackingwithswift.com ](https://www.hackingwithswift.com/read) + code challenges that provided by the tutor + my own customization to learn the frameworks better.
+These projects in this section contain implementations from [hackingwithswift.com ](https://www.hackingwithswift.com/read) + code challenges that provided by the tutor + my own customization to learn the frameworks better.
 
 
 ## [UIKit](https://www.hackingwithswift.com/100)
@@ -26,7 +26,7 @@ The / projects in this section are contain implementations from [hackingwithswif
 [Project 27: Core Graphics](https://github.com/mamadfrhi/SwiftBase/tree/main/UIKit/Project27_CoreGraphic)
 
 
-## [SwiftUI](https://www.hackingwithswift.com/100/swiftui)
+## [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 
 These SwiftUI projects below has been implemented from a course + my own customizations on them.
 
