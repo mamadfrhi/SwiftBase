@@ -47,12 +47,12 @@ struct ContentView: View {
                             resetImageState()
                         }
                     }
-                // MARK: - 1. DRAG GESTURE
+                // MARK: - 2. DRAG GESTURE
                     .gesture(
                         DragGesture()
                             .onChanged { value in
-                                imageOffset = value.translation
                                 withAnimation(.linear(duration: 1)) {
+                                    imageOffset = value.translation
                                 }
                             }
                             .onEnded { _ in
@@ -60,6 +60,26 @@ struct ContentView: View {
                                     withAnimation(.spring()) {
                                         resetImageState()
                                     }
+                                }
+                            }
+                    )
+                // MARK: - 3. MAGNIFICATION
+                    .gesture(
+                        MagnificationGesture()
+                            .onChanged { value in
+                                withAnimation(.linear(duration: 1)) {
+                                    if imageScale >= 1 && imageScale <= 5 {
+                                        imageScale = value
+                                    } else if imageScale > 5 {
+                                        imageScale = 5
+                                    }
+                                }
+                            }
+                            .onEnded { _ in
+                                if imageScale > 5 {
+                                    imageScale = 5
+                                } else if imageScale <= 1 {
+                                    resetImageState()
                                 }
                             }
                     )
@@ -83,7 +103,9 @@ struct ContentView: View {
                         // SCALE DOWN
                         Button {
                             if imageScale > 1 { // it's zoomed
-                                imageScale -= 1
+                                withAnimation {
+                                    imageScale -= 1
+                                }
                                 
                                 if imageScale <= 1 {
                                     resetImageState()
@@ -103,7 +125,9 @@ struct ContentView: View {
                         // SCALE UP
                         Button {
                             if imageScale < 5 {
-                                imageScale += 1
+                                withAnimation {
+                                    imageScale += 1
+                                }
                             }
                             
                             if imageScale >= 5 {
