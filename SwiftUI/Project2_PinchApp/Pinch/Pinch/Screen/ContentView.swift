@@ -26,7 +26,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.clear
+                Color.red
                 // MARK: - PAGE IMAGE
                 Image("magazine-front-cover")
                     .resizable()
@@ -82,21 +82,35 @@ struct ContentView: View {
                     HStack {
                         // SCALE DOWN
                         Button {
-                            // some action
+                            if imageScale > 1 { // it's zoomed
+                                imageScale -= 1
+                                
+                                if imageScale <= 1 {
+                                    resetImageState()
+                                }
+                            }
                         } label: {
                             ControlImageView(icon: "minus.magnifyingglass")
                         }
                         
                         // RESET
                         Button {
-                            // some action
+                            resetImageState()
                         } label: {
                             ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
                         }
                         
                         // SCALE UP
                         Button {
-                            // some action
+                            if imageScale < 5 {
+                                imageScale += 1
+                            }
+                            
+                            if imageScale >= 5 {
+                                withAnimation {
+                                    imageScale = 5
+                                }
+                            }
                         } label: {
                             ControlImageView(icon: "plus.magnifyingglass")
                         }
