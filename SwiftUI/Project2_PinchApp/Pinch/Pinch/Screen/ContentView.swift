@@ -76,6 +76,42 @@ struct ContentView: View {
                     .padding(.top, 30)
                 , alignment: .top
             )
+            // MARK: - CONTROLS
+            .overlay(
+                Group {
+                    HStack {
+                        // SCALE DOWN
+                        Button {
+                            // some action
+                        } label: {
+                            ControlImageView(icon: "minus.magnifyingglass")
+                        }
+                        
+                        // RESET
+                        Button {
+                            // some action
+                        } label: {
+                            ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
+                        }
+                        
+                        // SCALE UP
+                        Button {
+                            // some action
+                        } label: {
+                            ControlImageView(icon: "plus.magnifyingglass")
+                        }
+                    } //: CONTROLS
+                    .padding(EdgeInsets(top: 12,
+                                        leading: 20,
+                                        bottom: 12,
+                                        trailing: 20))
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(12)
+                    .opacity(isAnimating ? 1 : 0)
+                }
+                    .padding(.bottom, 30)
+                , alignment: .bottom
+            )
         } //: NAVIGATION
         .navigationViewStyle(.stack)
     }
