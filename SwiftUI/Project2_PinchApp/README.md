@@ -1,8 +1,8 @@
 ## Learned ☺️
 
-DragGesture()
-TapGesture()
-MagnificationGesture()
+* DragGesture()
+* TapGesture()
+* MagnificationGesture()
 
 ### Modifiers
 
