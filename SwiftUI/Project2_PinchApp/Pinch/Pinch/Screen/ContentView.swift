@@ -15,7 +15,11 @@ struct ContentView: View {
     @State private var imageOffset : CGSize = .zero
     @State private var isDrawerOpen : Bool = false
     
+    let pages: [Page] = pagesData
+    @State private var pageIndex = 0
+    
     // MARK: - FUNCTION
+    
     private func resetImageState() {
         withAnimation(.spring()) {
             imageScale = 1
@@ -27,9 +31,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.red
+                Color.clear
                 // MARK: - PAGE IMAGE
-                Image("magazine-front-cover")
+                Image(pages[pageIndex].imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(10)
@@ -64,7 +68,7 @@ struct ContentView: View {
                                 }
                             }
                     )
-                // MARK: - 3. MAGNIFICATION
+                // MARK: - 3. PINCH GESTURE
                     .gesture(
                         MagnificationGesture()
                             .onChanged { value in
@@ -168,6 +172,20 @@ struct ContentView: View {
                             }
                         }
                     // MARK: - THUMBNAILS
+                    ForEach(pages) { item in
+                        Image(item.thumbnailName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80)
+                            .cornerRadius(8)
+                            .shadow(radius: 4)
+                            .opacity(isDrawerOpen ? 1 : 0)
+                            .animation(.easeOut(duration: 1), value: isDrawerOpen)
+                            .onTapGesture {
+                                pageIndex = item.id
+                            }
+                    }
+                    
                     Spacer()
                 } //: DRAWER
                     .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
