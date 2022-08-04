@@ -30,4 +30,6 @@ These projects in this section contain implementations from [hackingwithswift.co
 
 These SwiftUI projects below has been implemented from a course + my own customizations on them.
 
-[Project 1: RESTART - Advanced iOS 15 App Design with SwiftUI 3](https://github.com/mamadfrhi/SwiftBase/tree/main/SwiftUI/Project1_Restart/)
+[Project 1: RESTART - Advanced iOS App Design with SwiftUI](https://github.com/mamadfrhi/SwiftBase/tree/main/SwiftUI/1.RestartApp)
+
+[Project 2: PINCH - SwiftUI App Development](https://github.com/mamadfrhi/SwiftBase/tree/main/SwiftUI/2.PinchApp)
