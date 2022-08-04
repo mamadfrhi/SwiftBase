@@ -58,6 +58,7 @@ struct FruitCardView: View {
                                    startPoint: .top,
                                    endPoint: .bottom))
         .cornerRadius(20)
+        .padding(.horizontal, 20)
     }
 }
 
