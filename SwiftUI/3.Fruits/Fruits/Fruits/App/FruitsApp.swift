@@ -14,7 +14,11 @@ struct FruitsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            isOnboarding ? OnboardingView() : ContentView()
+            if isOnboarding {
+                OnboardingView()
+            } else {
+                ContentView()
+            }
         }
     }
 }
