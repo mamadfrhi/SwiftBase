@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FruitCardView: View {
     // MARK: - PROPERTIES
+    
     let fruit: Fruit
     
     @State private var isAnimating = false
