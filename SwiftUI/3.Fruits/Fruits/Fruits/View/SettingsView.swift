@@ -20,7 +20,6 @@ struct SettingsView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20) {
                     // MARK: - SECTION 1
-                    
                     GroupBox(
                         label:
                             SettingsLabelView(labelText: "Fructus",
@@ -47,7 +46,8 @@ struct SettingsView: View {
                     // MARK: - SECTION 2
                     GroupBox(
                         label:
-                            SettingsLabelView(labelText: "Customization", labelImage: "paintbrush")
+                            SettingsLabelView(labelText: "Customization",
+                                              labelImage: "paintbrush")
                     ) {
                         Divider()
                             .padding(.vertical, 4)
@@ -93,11 +93,14 @@ struct SettingsView: View {
                     
                 } //: VSTACK
                 .navigationBarTitle(Text("Settings"))
-                .navigationBarItems(trailing: Button(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }, label: {
-                    Image(systemName: "xmark")
-                }))
+                .navigationBarItems(
+                    trailing:
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }, label: {
+                            Image(systemName: "xmark")
+                        })
+                )
                 .navigationBarTitleDisplayMode(.large)
             } //: SCROLL
         } //: NAVIGATION
