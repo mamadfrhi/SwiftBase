@@ -129,3 +129,6 @@ struct SettingsView_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
+
+// To continue:
+// https://www.hackingwithswift.com/articles/226/5-steps-to-better-swiftui-views
