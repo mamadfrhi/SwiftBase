@@ -12,7 +12,7 @@ struct SettingsView: View {
     // MARK: - PEROPERTIES
     
     @Environment(\.presentationMode) var presentationMode
-    @AppStorage("isOnboarding") var isOnboarding = true
+    @AppStorage("isOnboarding") var isOnboarding = false
     
     // MARK: - BODY
     var body: some View {
