@@ -25,8 +25,23 @@ struct SettingsView: View {
                             SettingsLabelView(labelText: "Fructus",
                                               labelImage: "info.circle")
                     ) {
-                        Text("It's a test!")
+                        
+                        Divider().padding(.vertical, 4)
+                        
+                        HStack(alignment: .center, spacing: 10) {
+                            
+                            Image("logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                                .cornerRadius(9)
+                            
+                            
+                            Text("Most fruits are naturally low in fat, sodium, and calories. None have cholesterool. Fruits are sources of many essential nuterients, including potassium, dietary fiber, vitamins, and much more.")
+                                .font(.footnote)
+                        }
                     }
+                    .padding()
                     
                     // MARK: - SECTION 2
                     
