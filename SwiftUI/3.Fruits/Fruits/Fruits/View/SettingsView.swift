@@ -62,7 +62,13 @@ struct SettingsView: View {
                         Toggle(isOn: $isOnboarding) {
                             Text("RESTART")
                         }
-                    }
+                        .padding()
+                        .background(
+                            Color(uiColor: .tertiarySystemBackground)
+                                .clipShape(RoundedRectangle(cornerRadius: 8,
+                                                            style: .continuous))
+                        )
+                    } //: BOX
                     .padding()
                     
                     // MARK: - SECTION 3
