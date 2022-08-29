@@ -60,7 +60,15 @@ struct SettingsView: View {
                             .multilineTextAlignment(.leading)
                         
                         Toggle(isOn: $isOnboarding) {
-                            Text("RESTART")
+                            if isOnboarding {
+                                Text("RESTARTED")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.green)
+                            } else {
+                                Text("RESTART")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.secondary)
+                            }
                         }
                         .padding()
                         .background(
