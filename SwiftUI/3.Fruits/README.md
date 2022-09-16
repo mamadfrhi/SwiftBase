@@ -1,47 +1,40 @@
 ## Learned ☺️
 
-### Frameworks
-* AVAudioPlayer
+### Special Concept
+* How to make view compatible to iPads as well
 
 ### Wrappers
 * @AppStorage
 * @State
+* @Environment
 
 ### Controls
-* Capsule()
-* Circle()
-* Image()
-* Text()
-* DragGesture()
-* Animation()
-* V H Z Stacks!
-* Spacer()
-* Button()
+* TabView {}
+* NavigationView {}
+* List {}
+* LinearGradient()
+* DisclosureGroup("") {}
+* GroupBox(label: ) {}
 
 ### Modifiers
-* .offset()
-* .animation()
-* .opacity()
-* .padding()
-* .blur()
-* .gesture()
-* .rotationEffect()
-* .overlay()
-* .font()
-* .frame()
-* .withAnimation(){}
-* .onAppear(perform: {})
-* .preferredColorScheme(.dark)
-* .buttonStyle()
-* .buttonBorderShape()
-* .controlSize()
+* .tabViewStyle()
+* .multilineTextAlignment(.trailing)
+* .accentColor(Color.white) // it doesn't pay attention to the dark or light mode, it always shows in white.
+* .sheet(isPresented:)
 
-
-
-
+#### NavigationBar Modifiers
+* .navigationViewStyle(StackNavigationViewStyle())
+* .navigationTitle("")
+* .navigationBarItems()
+* .navigationBarHidden(true)
+* .edgesIgnoringSafeArea(.top)
+* .navigationBarTitle(fruit.title, displayMode: .inline)
+* .navigationBarTitleDisplayMode(.large)
 
 ## Showcase 📱
 
 
-https://user-images.githubusercontent.com/28094207/175720853-8672b9b7-9029-4b99-a849-940c7abac7df.mov
+### iPad
+
+### iOS
 
