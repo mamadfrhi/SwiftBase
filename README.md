@@ -33,3 +33,5 @@ These SwiftUI projects below has been implemented from a course + my own customi
 [Project 1: RESTART - Advanced iOS App Design with SwiftUI](https://github.com/mamadfrhi/SwiftBase/tree/main/SwiftUI/1.RestartApp)
 
 [Project 2: PINCH - SwiftUI App Development](https://github.com/mamadfrhi/SwiftBase/tree/main/SwiftUI/2.PinchApp)
+
+[Project 2: FRUITS - SwiftUI App Development](https://github.com/mamadfrhi/SwiftBase/tree/main/SwiftUI/3.Fruits)
