@@ -5,25 +5,46 @@
 * Make eye-catching launch screen
 * Make compatible views for dark mode
 * Deal with JSON
+* Codeable
+* Generic
+* Make reuseable views
 
 ### Wrappers
-* @AppStorage
 
 ### Controls
 * TabView {}
   * .tabItem
+  * .tabViewStyle(PageTabViewStyle())
+
+* List {}
+  * .listRowInsets(EdgeInsets())
+
+* NavigationView {}
+  * .navigationTitle("Africa")
+  * .navigationBarTitleDisplayMode(.large)
+  * Modifiers above should be on view inside of the NavigationView
+
+
+* Image
+  * .clipShape(RoundedRectangle(cornerRadius: 12))
+
+* Text("Lion")
+  * .font(.title2)
+  * .fontWeight(.heavy)
+  * .foregroundColor(.accentColor)
+  * .multilineTextAlignment(.leading)
+  * .lineLimit(2)
+  * .padding(.trailing, 8)
+  * .background(
+      Color.accentColor
+      .frame(height: 6)
+      .offset(y: 24)
+      ) -> it makes an underline under the text
 ### Modifiers
 
 * .previewLayout(.fixed(width: 400, height: 300))
-
-#### NavigationBar Modifiers
-* .navigationViewStyle(StackNavigationViewStyle())
-* .navigationTitle("")
-* .navigationBarItems()
-* .navigationBarHidden(true)
-* .edgesIgnoringSafeArea(.top)
-* .navigationBarTitle(fruit.title, displayMode: .inline)
-* .navigationBarTitleDisplayMode(.large)
+* .previewLayout(.sizeThatFits)
+* .previewDevice("iPhone 11 Pro")
 
 ## Showcase 📱
 
