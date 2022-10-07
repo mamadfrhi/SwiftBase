@@ -2,25 +2,19 @@
 
 ### Special Concept
 * How to make view compatible to iPads as well
+* Make eye-catching launch screen
+* Make compatible views for dark mode
+* Deal with JSON
 
 ### Wrappers
 * @AppStorage
-* @State
-* @Environment
 
 ### Controls
 * TabView {}
-* NavigationView {}
-* List {}
-* LinearGradient()
-* DisclosureGroup("") {}
-* GroupBox(label: ) {}
-
+  * .tabItem
 ### Modifiers
-* .tabViewStyle()
-* .multilineTextAlignment(.trailing)
-* .accentColor(Color.white) // it doesn't pay attention to the dark or light mode, it always shows in white.
-* .sheet(isPresented:)
+
+* .previewLayout(.fixed(width: 400, height: 300))
 
 #### NavigationBar Modifiers
 * .navigationViewStyle(StackNavigationViewStyle())
