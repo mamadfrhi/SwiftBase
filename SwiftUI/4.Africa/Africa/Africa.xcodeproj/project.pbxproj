@@ -14,6 +14,8 @@
 		8769869328F05C2D0057D9BF /* CoverImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8769869228F05C2D0057D9BF /* CoverImageView.swift */; };
 		8769869628F0641B0057D9BF /* CoverImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8769869528F0641B0057D9BF /* CoverImageModel.swift */; };
 		8769869928F0652C0057D9BF /* Bundle+decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8769869828F0652C0057D9BF /* Bundle+decode.swift */; };
+		8769869D28F06BEC0057D9BF /* AnimalListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8769869C28F06BEC0057D9BF /* AnimalListItemView.swift */; };
+		8769869F28F06E520057D9BF /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8769869E28F06E520057D9BF /* Animal.swift */; };
 		8770043C28E73D950077567D /* AfricaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8770043B28E73D950077567D /* AfricaApp.swift */; };
 		8770043E28E73D950077567D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8770043D28E73D950077567D /* ContentView.swift */; };
 		8770044028E73D980077567D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8770043F28E73D980077567D /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		8769869228F05C2D0057D9BF /* CoverImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageView.swift; sourceTree = "<group>"; };
 		8769869528F0641B0057D9BF /* CoverImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageModel.swift; sourceTree = "<group>"; };
 		8769869828F0652C0057D9BF /* Bundle+decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+decode.swift"; sourceTree = "<group>"; };
+		8769869C28F06BEC0057D9BF /* AnimalListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListItemView.swift; sourceTree = "<group>"; };
+		8769869E28F06E520057D9BF /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Animal.swift; path = Africa/Model/Animal.swift; sourceTree = SOURCE_ROOT; };
 		8770043828E73D950077567D /* Africa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8770043B28E73D950077567D /* AfricaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaApp.swift; sourceTree = "<group>"; };
 		8770043D28E73D950077567D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8769869228F05C2D0057D9BF /* CoverImageView.swift */,
+				8769869C28F06BEC0057D9BF /* AnimalListItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				8769869528F0641B0057D9BF /* CoverImageModel.swift */,
+				8769869E28F06E520057D9BF /* Animal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,13 +136,13 @@
 		8770043A28E73D950077567D /* Africa */ = {
 			isa = PBXGroup;
 			children = (
-				8769869728F0651F0057D9BF /* Extension */,
+				8769868628F058780057D9BF /* App */,
 				8769869428F0640A0057D9BF /* Model */,
 				87D79FD528E743C2006CB65E /* Data */,
-				87D79FC028E74369006CB65E /* Video */,
-				8769868628F058780057D9BF /* App */,
 				8769869128F05C1E0057D9BF /* View */,
 				8770043F28E73D980077567D /* Assets.xcassets */,
+				87D79FC028E74369006CB65E /* Video */,
+				8769869728F0651F0057D9BF /* Extension */,
 				8770044128E73D980077567D /* Preview Content */,
 			);
 			path = Africa;
@@ -263,9 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8769869928F0652C0057D9BF /* Bundle+decode.swift in Sources */,
+				8769869D28F06BEC0057D9BF /* AnimalListItemView.swift in Sources */,
 				8770043E28E73D950077567D /* ContentView.swift in Sources */,
 				8769868E28F059290057D9BF /* MainView.swift in Sources */,
 				8769869328F05C2D0057D9BF /* CoverImageView.swift in Sources */,
+				8769869F28F06E520057D9BF /* Animal.swift in Sources */,
 				8769869628F0641B0057D9BF /* CoverImageModel.swift in Sources */,
 				8769868A28F058E60057D9BF /* MapView.swift in Sources */,
 				8770043C28E73D950077567D /* AfricaApp.swift in Sources */,
