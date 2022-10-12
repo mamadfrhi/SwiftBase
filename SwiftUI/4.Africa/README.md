@@ -12,13 +12,21 @@
 ### Wrappers
 
 ### Controls
+* Group{}
+* GroupBox{}
 * TabView {}
   * .tabItem
   * .tabViewStyle(PageTabViewStyle())
+  * .frame(minWidth: 148, idealWidth: 168, maxHeight: 180)
 
 * List {}
   * .listRowInsets(EdgeInsets())
 
+
+
+* NavigationLink(destination: AnimalDetailView(animal: animal)) {
+                        AnimalListItemView(animal: animal)
+                    }
 * NavigationView {}
   * .navigationTitle("Africa")
   * .navigationBarTitleDisplayMode(.large)
@@ -27,6 +35,7 @@
 
 * Image
   * .clipShape(RoundedRectangle(cornerRadius: 12))
+  * .imageScale(.large)
 
 * Text("Lion")
   * .font(.title2)
