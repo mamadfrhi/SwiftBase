@@ -110,9 +110,7 @@
 		8769869128F05C1E0057D9BF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8769869228F05C2D0057D9BF /* CoverImageView.swift */,
-				8769869C28F06BEC0057D9BF /* AnimalListItemView.swift */,
-				876986A628F08B5A0057D9BF /* AnimalDetailView */,
+				879A827128F71B0900D3ACB2 /* VideoListView */,
 				879A826D28F713ED00D3ACB2 /* VideoListItem.swift */,
 			);
 			path = View;
@@ -186,6 +184,16 @@
 				8770044228E73D980077567D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		879A827128F71B0900D3ACB2 /* VideoListView */ = {
+			isa = PBXGroup;
+			children = (
+				8769869228F05C2D0057D9BF /* CoverImageView.swift */,
+				8769869C28F06BEC0057D9BF /* AnimalListItemView.swift */,
+				876986A628F08B5A0057D9BF /* AnimalDetailView */,
+			);
+			path = VideoListView;
 			sourceTree = "<group>";
 		};
 		87D79FC028E74369006CB65E /* Video */ = {
