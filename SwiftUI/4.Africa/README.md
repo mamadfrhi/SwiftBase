@@ -8,13 +8,27 @@
 * Deal with JSON (Codeable)
 * Generic
 * Make reuseable views
-* MapKit
-* Computer Properties
+* Computed Properties
 * Haptics
-
+* AVKit
+* MapKit
+  * Custom Annotation
+* GeometryReader
+* Complex Animations
 ### Wrappers
 
 ### Controls
+* VideoPlayer(player: AVPlayer())
+  * ```
+    { Text(videoTitle) }
+    .overlay(
+      Image("logo")
+        .resizable()
+        .scaledToFit()
+        .frame(width: 32, height: 32),
+         alignment: .topLeading
+           )
+    ```
 * Map(coordinateRegion: $region)
   * ```
     .overlay(
@@ -57,6 +71,7 @@
 * Image
   * .clipShape(RoundedRectangle(cornerRadius: 12))
   * .imageScale(.large)
+  * .clipShape(Circle())
 
 * Text("Lion")
   * .font(.title2)
@@ -72,6 +87,20 @@
       .offset(y: 24)
       ) // -> it makes an underline under the text
     ```
+
+* Circle()
+  * .stroke(Color.accentColor, lineWidth: 2)
+  * center)
+  * .scaleEffect(1 + CGFloat(animation))
+  * .opacity(1 - animation)
+  * .drawingGroup() // dispatch animation go GPU which cause better performance
+  * ```
+    .onAppear {
+      withAnimation(Animation.easeIn(duration: 2).repeatForever(autoreverses: false)) {
+      animation = 1
+      }
+    }
+   ```
 ### Modifiers
 
 * .previewLayout(.fixed(width: 400, height: 300))
