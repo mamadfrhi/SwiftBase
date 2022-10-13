@@ -28,6 +28,8 @@
 		879A826A28F6FC5D00D3ACB2 /* ExternalWebLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A826928F6FC5D00D3ACB2 /* ExternalWebLinkView.swift */; };
 		879A826C28F7137600D3ACB2 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A826B28F7137600D3ACB2 /* Video.swift */; };
 		879A826E28F713ED00D3ACB2 /* VideoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A826D28F713ED00D3ACB2 /* VideoListItemView.swift */; };
+		87D1C72628F7F4B000183456 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1C72528F7F4B000183456 /* VideoPlayerView.swift */; };
+		87D1C72928F7FB0100183456 /* VideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1C72828F7FB0100183456 /* VideoPlayerHelper.swift */; };
 		87D79FCB28E74399006CB65E /* rhino.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 87D79FC128E74395006CB65E /* rhino.mp4 */; };
 		87D79FCC28E74399006CB65E /* zebra.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 87D79FC228E74395006CB65E /* zebra.mp4 */; };
 		87D79FCD28E74399006CB65E /* cheetah.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 87D79FC328E74396006CB65E /* cheetah.mp4 */; };
@@ -67,6 +69,8 @@
 		879A826928F6FC5D00D3ACB2 /* ExternalWebLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalWebLinkView.swift; sourceTree = "<group>"; };
 		879A826B28F7137600D3ACB2 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		879A826D28F713ED00D3ACB2 /* VideoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListItemView.swift; sourceTree = "<group>"; };
+		87D1C72528F7F4B000183456 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		87D1C72828F7FB0100183456 /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
 		87D79FC128E74395006CB65E /* rhino.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rhino.mp4; sourceTree = "<group>"; };
 		87D79FC228E74395006CB65E /* zebra.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zebra.mp4; sourceTree = "<group>"; };
 		87D79FC328E74396006CB65E /* cheetah.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cheetah.mp4; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			children = (
 				879A827128F71B0900D3ACB2 /* VideoListView */,
 				879A826D28F713ED00D3ACB2 /* VideoListItemView.swift */,
+				87D1C72528F7F4B000183456 /* VideoPlayerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 		8770043A28E73D950077567D /* Africa */ = {
 			isa = PBXGroup;
 			children = (
+				87D1C72728F7FAF300183456 /* Helper */,
 				8769868628F058780057D9BF /* App */,
 				8769869428F0640A0057D9BF /* Model */,
 				87D79FD528E743C2006CB65E /* Data */,
@@ -194,6 +200,14 @@
 				876986A628F08B5A0057D9BF /* AnimalDetailView */,
 			);
 			path = VideoListView;
+			sourceTree = "<group>";
+		};
+		87D1C72728F7FAF300183456 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				87D1C72828F7FB0100183456 /* VideoPlayerHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		87D79FC028E74369006CB65E /* Video */ = {
@@ -318,6 +332,7 @@
 				876986A328F0815E0057D9BF /* HeadingView.swift in Sources */,
 				8769869F28F06E520057D9BF /* Animal.swift in Sources */,
 				879A826828F6F6E100D3ACB2 /* InsetMapView.swift in Sources */,
+				87D1C72928F7FB0100183456 /* VideoPlayerHelper.swift in Sources */,
 				8769869628F0641B0057D9BF /* CoverImageModel.swift in Sources */,
 				879A826A28F6FC5D00D3ACB2 /* ExternalWebLinkView.swift in Sources */,
 				8769868A28F058E60057D9BF /* MapView.swift in Sources */,
@@ -327,6 +342,7 @@
 				879A826E28F713ED00D3ACB2 /* VideoListItemView.swift in Sources */,
 				8769868828F058C90057D9BF /* VideoListView.swift in Sources */,
 				8769868C28F058F80057D9BF /* GalleryView.swift in Sources */,
+				87D1C72628F7F4B000183456 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

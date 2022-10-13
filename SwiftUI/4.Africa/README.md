@@ -2,18 +2,28 @@
 
 ### Special Concept
 * How to make view compatible to iPads as well
+* accentColor and loading resources correctly
 * Make eye-catching launch screen
 * Make compatible views for dark mode
-* Deal with JSON
-* Codeable
+* Deal with JSON (Codeable)
 * Generic
 * Make reuseable views
+* MapKit
+* Computer Properties
+* Haptics
 
 ### Wrappers
 
 ### Controls
+* Map(coordinateRegion: $region)
+  * ```
+    .overlay(
+      NavigationLink(destination: MapView()) {
+        Image(systemName: "mappin.circle")
+      })
+      ```
 * Group{}
-* GroupBox{}
+* GroupBox{} -> it makes a nice background behind of its children
 * TabView {}
   * .tabItem
   * .tabViewStyle(PageTabViewStyle())
@@ -21,18 +31,29 @@
 
 * List {}
   * .listRowInsets(EdgeInsets())
+  * .listStyle(.insetGrouped)
+* ``` 
+  NavigationLink(
+    destination: AnimalDetailView(animal: animal)) {
+        AnimalListItemView(animal: animal)
+    }
+  ```
 
-
-
-* NavigationLink(destination: AnimalDetailView(animal: animal)) {
-                        AnimalListItemView(animal: animal)
-                    }
 * NavigationView {}
   * .navigationTitle("Africa")
   * .navigationBarTitleDisplayMode(.large)
   * Modifiers above should be on view inside of the NavigationView
-
-
+  * ```
+    .toolbar {
+                  ToolbarItem(placement: .navigationBarTrailing) {
+                      Button {
+                          videos.shuffle()
+                      } label: {
+                          Image(systemName: "arrow.2.squarepath")
+                      }
+                  }
+              }
+    ```
 * Image
   * .clipShape(RoundedRectangle(cornerRadius: 12))
   * .imageScale(.large)
@@ -44,11 +65,13 @@
   * .multilineTextAlignment(.leading)
   * .lineLimit(2)
   * .padding(.trailing, 8)
-  * .background(
+  * ``` 
+    .background(
       Color.accentColor
       .frame(height: 6)
       .offset(y: 24)
-      ) -> it makes an underline under the text
+      ) // -> it makes an underline under the text
+    ```
 ### Modifiers
 
 * .previewLayout(.fixed(width: 400, height: 300))

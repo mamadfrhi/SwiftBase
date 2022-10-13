@@ -17,8 +17,11 @@ struct VideoListView: View {
     var body: some View {
         NavigationView {
             List(videos) { video in
-                VideoListItemView(video: video)
-                    .padding(.vertical, 8)
+                NavigationLink(destination: VideoPlayerView(videoSelected: video.id,
+                                                            videoTitle: video.name)) {
+                    VideoListItemView(video: video)
+                        .padding(.vertical, 8)
+                }
             } //: LIST
             .navigationTitle(Text("Videos"))
             .toolbar {
