@@ -27,7 +27,7 @@ struct MapView: View {
     
     var body: some View {
         // MARK: - No1 BASIC MAP
-//        Map(coordinateRegion: $region)
+        //        Map(coordinateRegion: $region)
         
         // MARK: - No2 ADVANCE MAP
         Map(coordinateRegion: $region, annotationItems: locations) { annotation in
@@ -49,8 +49,53 @@ struct MapView: View {
             MapAnnotation(coordinate: annotation.location) {
                 MapAnnotationView(location: annotation)
             }
-            
-        }
+        } //: MAP
+        .overlay(
+            HStack(alignment: .center, spacing: 12) {
+                Image("compass")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 48, height: 48)
+                
+                VStack(alignment: .leading, spacing: 3) {
+                    HStack {
+                        Text("Latitude")
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .foregroundColor(.accentColor)
+                        Spacer()
+                        Text("\(region.center.latitude)")
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                    }
+                    
+                    Divider()
+                    
+                    HStack {
+                        Text("Longtitude")
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .foregroundColor(.accentColor)
+                        Spacer()
+                        Text("\(region.center.longitude)")
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                    }
+                    
+                } //: VSTACK
+                
+                
+            } //: HSTACK
+                .padding(.vertical, 12)
+                .padding(.horizontal, 16)
+                .background(
+                    Color.black
+                        .cornerRadius(8)
+                        .opacity(0.6)
+                )
+                .padding()
+            , alignment: .top
+        )
     }
 }
 
