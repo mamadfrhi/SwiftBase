@@ -116,9 +116,8 @@
 		8769869128F05C1E0057D9BF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				879A827128F71B0900D3ACB2 /* VideoListView */,
-				879A826D28F713ED00D3ACB2 /* VideoListItemView.swift */,
-				87D1C72528F7F4B000183456 /* VideoPlayerView.swift */,
+				879A827128F71B0900D3ACB2 /* Browse */,
+				8770F84C28F819E600B341ED /* Watch */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,14 +194,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		879A827128F71B0900D3ACB2 /* VideoListView */ = {
+		8770F84C28F819E600B341ED /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				879A826D28F713ED00D3ACB2 /* VideoListItemView.swift */,
+				87D1C72528F7F4B000183456 /* VideoPlayerView.swift */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		879A827128F71B0900D3ACB2 /* Browse */ = {
 			isa = PBXGroup;
 			children = (
 				8769869228F05C2D0057D9BF /* CoverImageView.swift */,
 				8769869C28F06BEC0057D9BF /* AnimalListItemView.swift */,
 				876986A628F08B5A0057D9BF /* AnimalDetailView */,
 			);
-			path = VideoListView;
+			path = Browse;
 			sourceTree = "<group>";
 		};
 		87D1C72728F7FAF300183456 /* Helper */ = {
