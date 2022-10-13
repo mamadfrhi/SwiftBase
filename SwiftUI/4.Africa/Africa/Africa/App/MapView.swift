@@ -37,13 +37,18 @@ struct MapView: View {
             // (B) - New Style (Always Static)
             // MapMarker(coordinate: annotation.location, tint: .accentColor)
             
-            // (B) - Custom Basic (it could be interactive)
+            // (C) - Custom Basic (it could be interactive)
+            // MapAnnotation(coordinate: annotation.location) {
+            //     Image("logo")
+            //         .resizable()
+            //         .scaledToFit()
+            //         .frame(width: 32, height: 32, alignment: .center)
+            // }  //: ANNOTATION
+            
+            // (D) - Custom Advanced Annotation (it could be interactive)
             MapAnnotation(coordinate: annotation.location) {
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 32, height: 32, alignment: .center)
-            }  //: ANNOTATION
+                MapAnnotationView(location: annotation)
+            }
             
         }
     }
