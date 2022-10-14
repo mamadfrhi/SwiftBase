@@ -12,7 +12,8 @@ struct GalleryView: View {
     //MARK: - PROPERTIES
     
     @State private var selectedAnimal : String = "lion"
-    let animals : [Animal] = Bundle.main.decode("animals.json")
+    private let animals : [Animal] = Bundle.main.decode("animals.json")
+    private let haptics = UIImpactFeedbackGenerator(style: .medium)
     
     // Simple Grid Definition
     // let gridColumns : [GridItem] = [
@@ -71,10 +72,11 @@ struct GalleryView: View {
                             )
                             .onTapGesture {
                                 selectedAnimal = animal.image
+                                haptics.impactOccurred()
                             }
                     } //: LOOP
                 } //: GRID
-                          .animation(.easeInOut, value: UUID())
+                .animation(.easeOut(duration: 1), value: UUID())
                 .onAppear {
                     gridSwitch()
                 }
