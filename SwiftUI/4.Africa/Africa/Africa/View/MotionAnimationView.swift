@@ -30,12 +30,12 @@ struct MotionAnimationView: View {
                             y: randomCoordinate(max: geo.size.height)
                         )
                         .animation(
-                            Animation.interpolatingSpring(stiffness: 0.5,
-                                                          damping: 0.5)
+                            .interpolatingSpring(stiffness: 0.5,
+                                                 damping: 0.5)
                             .repeatForever()
                             .speed(randomSpeed())
                             .delay(randomDelay())
-                                   ,value: isAnimating)
+                            ,value: isAnimating)
                 } //: LOOP
             } //: ZSTACK
             .drawingGroup()

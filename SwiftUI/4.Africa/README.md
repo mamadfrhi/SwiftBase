@@ -1,7 +1,7 @@
 ## Learned ☺️
 
 ### Special Concept
-* How to make view compatible to iPads as well
+* How to make views compatible to iPads as well
 * accentColor and loading resources correctly
 * Make eye-catching launch screen
 * Make compatible views for dark mode
@@ -15,6 +15,8 @@
   * Custom Annotation
 * GeometryReader
 * Complex Animations
+* Grid
+  * LazyVGrid
 ### Wrappers
 
 ### Controls
@@ -88,6 +90,7 @@
       ) // -> it makes an underline under the text
     ```
 
+
 * Circle()
   * .stroke(Color.accentColor, lineWidth: 2)
   * center)
@@ -97,10 +100,11 @@
   * ```
     .onAppear {
       withAnimation(Animation.easeIn(duration: 2).repeatForever(autoreverses: false)) {
-      animation = 1
+        animation = 1
       }
     }
-   ```
+    ```
+* Slider(value: $gridColumn, in: 2...4)
 ### Modifiers
 
 * .previewLayout(.fixed(width: 400, height: 300))
