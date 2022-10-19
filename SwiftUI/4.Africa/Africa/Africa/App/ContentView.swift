@@ -16,7 +16,7 @@ struct ContentView: View {
     
     @State private var isGridViewActive = false
     
-    @State private var gridLayout: [GridItem] = Array.init(repeating: .init(.flexible()), count: 3)
+    @State private var gridLayout: [GridItem] = Array.init(repeating: .init(.flexible()), count: 2)
     
     //MARK: - BODY
     var body: some View {
@@ -24,12 +24,19 @@ struct ContentView: View {
             
             Group {
                 if isGridViewActive {
-                    Text("GridView is Active.")
-                    LazyVGrid(columns: gridLayout,
-                              alignment: .center,
-                              spacing: 12) {
-                        Text("item")
-                    }
+                    ScrollView(.vertical) {
+                        LazyVGrid(columns: gridLayout,
+                                  alignment: .center,
+                                  spacing: 10) {
+                            ForEach(animals) { animal in
+                                NavigationLink(destination: AnimalDetailView(animal: animal)) {
+                                    AnimalGridItemView(animal: animal)
+                                } //: LINK
+                            } //: LOOP
+                        } //: GRID
+                                  .padding(10)
+                                  .animation(.easeIn, value:  UUID())
+                    } //: SCROLL
                 } else {
                     List {
                         CoverImageView()
