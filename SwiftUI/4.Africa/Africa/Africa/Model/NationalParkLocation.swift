@@ -7,7 +7,7 @@
 
 import MapKit
 
-struct NationalParktLocation: Codable, Identifiable {
+struct NationalParkLocation: Codable, Identifiable {
     let id : String
     let name : String
     let image: String

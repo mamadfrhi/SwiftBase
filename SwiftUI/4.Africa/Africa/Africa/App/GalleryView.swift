@@ -57,7 +57,7 @@ struct GalleryView: View {
                         gridSwitch()
                     }
                 
-                //MARK: - GTRID
+                //MARK: - GRID
                 LazyVGrid(columns: gridLayout,
                           alignment: .center,
                           spacing: 10) {
