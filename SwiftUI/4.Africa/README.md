@@ -1,10 +1,11 @@
 ## Learned ☺️
 
 ### Special Concept
-* How to make views compatible to iPads as well
+* How to make views compatible to iPads as well as iOS
 * accentColor and loading resources correctly
 * Make eye-catching launch screen
 * Make compatible views for dark mode
+* iMessage Stickers
 * Deal with JSON (Codeable)
 * Generic
 * Make reuseable views
