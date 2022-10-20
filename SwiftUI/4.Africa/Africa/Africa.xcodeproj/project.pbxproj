@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8740E39F2901877400985E46 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8740E39E2901877400985E46 /* Stickers.xcassets */; };
 		8740E3A32901877400985E46 /* Stickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8740E39C2901876E00985E46 /* Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8740E3A929018D3500985E46 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740E3A829018D3500985E46 /* CreditsView.swift */; };
+		8740E3AC2901912E00985E46 /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740E3AB2901912E00985E46 /* CenterModifier.swift */; };
 		8769868828F058C90057D9BF /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8769868728F058C90057D9BF /* VideoListView.swift */; };
 		8769868A28F058E60057D9BF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8769868928F058E60057D9BF /* MapView.swift */; };
 		8769868C28F058F80057D9BF /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8769868B28F058F80057D9BF /* GalleryView.swift */; };
@@ -80,6 +82,8 @@
 		8740E39C2901876E00985E46 /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8740E39E2901877400985E46 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		8740E3A02901877400985E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8740E3A829018D3500985E46 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		8740E3AB2901912E00985E46 /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
 		8769868728F058C90057D9BF /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
 		8769868928F058E60057D9BF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		8769868B28F058F80057D9BF /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
@@ -144,6 +148,14 @@
 			path = Stickers;
 			sourceTree = "<group>";
 		};
+		8740E3AA29018E5900985E46 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				8740E3AB2901912E00985E46 /* CenterModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
 		8769868628F058780057D9BF /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +177,7 @@
 				8770F84D28F81A1700B341ED /* MapAnnotationView.swift */,
 				8770F84F28F839A000B341ED /* MotionAnimationView.swift */,
 				8786858E29003BB700FFF451 /* AnimalGridItemView.swift */,
+				8740E3A829018D3500985E46 /* CreditsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,6 +235,7 @@
 		8770043A28E73D950077567D /* Africa */ = {
 			isa = PBXGroup;
 			children = (
+				8740E3AA29018E5900985E46 /* Modifier */,
 				8769868628F058780057D9BF /* App */,
 				8769869428F0640A0057D9BF /* Model */,
 				8769869128F05C1E0057D9BF /* View */,
@@ -430,10 +444,12 @@
 				879A826C28F7137600D3ACB2 /* Video.swift in Sources */,
 				8770043C28E73D950077567D /* AfricaApp.swift in Sources */,
 				876986A528F0831D0057D9BF /* InsetGalleryView.swift in Sources */,
+				8740E3A929018D3500985E46 /* CreditsView.swift in Sources */,
 				8786858F29003BB700FFF451 /* AnimalGridItemView.swift in Sources */,
 				879A826E28F713ED00D3ACB2 /* VideoListItemView.swift in Sources */,
 				8769868828F058C90057D9BF /* VideoListView.swift in Sources */,
 				8770F85028F839A000B341ED /* MotionAnimationView.swift in Sources */,
+				8740E3AC2901912E00985E46 /* CenterModifier.swift in Sources */,
 				8769868C28F058F80057D9BF /* GalleryView.swift in Sources */,
 				87D1C72628F7F4B000183456 /* VideoPlayerView.swift in Sources */,
 			);

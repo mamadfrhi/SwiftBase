@@ -1,7 +1,8 @@
 ## Learned ☺️
 
 ### Special Concept
-* How to make views compatible to iPads as well as iOS
+* How to make views compatible to iPads as well as iPhone
+* Bring iPAD app to Mac usin Catalyst
 * accentColor and loading resources correctly
 * Make eye-catching launch screen
 * Make compatible views for dark mode
@@ -19,6 +20,8 @@
 * Grid
   * Simple LazyVGrid
   * LazyVGrid with custom GridItem
+* Custom modifier
+
 ### Wrappers
 
 ### Controls
