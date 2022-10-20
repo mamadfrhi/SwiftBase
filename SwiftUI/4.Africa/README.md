@@ -16,7 +16,8 @@
 * GeometryReader
 * Complex Animations
 * Grid
-  * LazyVGrid
+  * Simple LazyVGrid
+  * LazyVGrid with custom GridItem
 ### Wrappers
 
 ### Controls
