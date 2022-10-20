@@ -3,6 +3,7 @@
 ### Special Concept
 * How to make views compatible to iPads as well as iPhone
 * Bring iPAD app to Mac usin Catalyst
+* Create multiplatforom app
 * accentColor and loading resources correctly
 * Make eye-catching launch screen
 * Make compatible views for dark mode
