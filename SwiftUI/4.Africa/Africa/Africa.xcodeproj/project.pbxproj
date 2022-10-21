@@ -178,7 +178,6 @@
 				8770F84D28F81A1700B341ED /* MapAnnotationView.swift */,
 				8770F84F28F839A000B341ED /* MotionAnimationView.swift */,
 				8786858E29003BB700FFF451 /* AnimalGridItemView.swift */,
-				8740E3A829018D3500985E46 /* CreditsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +272,7 @@
 			children = (
 				8769869228F05C2D0057D9BF /* CoverImageView.swift */,
 				8769869C28F06BEC0057D9BF /* AnimalListItemView.swift */,
+				8740E3A829018D3500985E46 /* CreditsView.swift */,
 				876986A628F08B5A0057D9BF /* AnimalDetailView */,
 			);
 			path = Browse;
@@ -476,6 +476,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DD444593MH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Stickers/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Africa;
@@ -497,6 +498,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DD444593MH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Stickers/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Africa;
