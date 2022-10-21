@@ -1,6 +1,6 @@
 ## Learned ☺️
 
-### Special Concept
+### Special Concept 😊
 * Make multi-platform views for iPhone, iPad and Mac
 * Bring iPad app to Mac using Catalyst
 * accentColor and loading resources correctly
@@ -19,7 +19,6 @@
 * Custom modifiers
 
 ### Controls 🕹
-* **GeometryReader**
 * **Grid**
   * Simple LazyVGrid
   * LazyVGrid with custom GridItem
@@ -97,10 +96,6 @@
   * .imageScale(.large)
   * .clipShape(Circle())
 
-* **Slider(value: $gridColumn, in: 2...4)**
-
-* **Group{}**
-* **GroupBox{}** -> it makes a nice background behind of its children
 * **TabView {}**
   * .tabItem
   * .tabViewStyle(PageTabViewStyle())
@@ -108,6 +103,11 @@
 * **List {}**
   * .listRowInsets(EdgeInsets())
   * .listStyle(.insetGrouped)
+  
+* **Slider(value: $gridColumn, in: 2...4)**
+* **GeometryReader**
+* **Group{}**
+* **GroupBox{}** -> it makes a nice background behind of its children
 ### Modifiers
 
 * .previewLayout(.fixed(width: 400, height: 300))
