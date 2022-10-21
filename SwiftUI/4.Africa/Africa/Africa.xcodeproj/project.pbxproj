@@ -219,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				8770043A28E73D950077567D /* Africa */,
-				8770043F28E73D980077567D /* Assets.xcassets */,
 				8740E39D2901876E00985E46 /* Stickers */,
 				8770043928E73D950077567D /* Products */,
 			);
@@ -237,16 +236,17 @@
 		8770043A28E73D950077567D /* Africa */ = {
 			isa = PBXGroup;
 			children = (
-				8740E3AD2901A01200985E46 /* Africa.entitlements */,
-				8740E3AA29018E5900985E46 /* Modifier */,
 				8769868628F058780057D9BF /* App */,
-				8769869428F0640A0057D9BF /* Model */,
 				8769869128F05C1E0057D9BF /* View */,
+				8769869428F0640A0057D9BF /* Model */,
 				87D79FD528E743C2006CB65E /* Data */,
 				87D79FC028E74369006CB65E /* Video */,
+				8740E3AA29018E5900985E46 /* Modifier */,
 				8769869728F0651F0057D9BF /* Extension */,
 				87D1C72728F7FAF300183456 /* Helper */,
 				8770044128E73D980077567D /* Preview Content */,
+				8770043F28E73D980077567D /* Assets.xcassets */,
+				8740E3AD2901A01200985E46 /* Africa.entitlements */,
 			);
 			path = Africa;
 			sourceTree = "<group>";
