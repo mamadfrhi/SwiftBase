@@ -1,13 +1,13 @@
 ## Learned ☺️
 
 ### Special Concept
-* How to make views compatible to iPads as well as iPhone
-* Bring iPAD app to Mac usin Catalyst
-* Create multiplatforom app
+* Make multi-platform views for iPhone, iPad and Mac
+* Bring iPad app to Mac using Catalyst
 * accentColor and loading resources correctly
 * Make eye-catching launch screen
 * Make compatible views for dark mode
 * iMessage Stickers
+* Complex Animations
 * Deal with JSON (Codeable)
 * Generic
 * Make reuseable views
@@ -16,17 +16,14 @@
 * AVKit
 * MapKit
   * Custom Annotation
-* GeometryReader
-* Complex Animations
-* Grid
+* Custom modifiers
+
+### Controls 🕹
+* **GeometryReader**
+* **Grid**
   * Simple LazyVGrid
   * LazyVGrid with custom GridItem
-* Custom modifier
-
-### Wrappers
-
-### Controls
-* VideoPlayer(player: AVPlayer())
+* **VideoPlayer(player: AVPlayer())**
   * ```
     { Text(videoTitle) }
     .overlay(
@@ -37,31 +34,15 @@
          alignment: .topLeading
            )
     ```
-* Map(coordinateRegion: $region)
+* **Map(coordinateRegion: $region)**
   * ```
     .overlay(
       NavigationLink(destination: MapView()) {
         Image(systemName: "mappin.circle")
       })
       ```
-* Group{}
-* GroupBox{} -> it makes a nice background behind of its children
-* TabView {}
-  * .tabItem
-  * .tabViewStyle(PageTabViewStyle())
-  * .frame(minWidth: 148, idealWidth: 168, maxHeight: 180)
 
-* List {}
-  * .listRowInsets(EdgeInsets())
-  * .listStyle(.insetGrouped)
-* ``` 
-  NavigationLink(
-    destination: AnimalDetailView(animal: animal)) {
-        AnimalListItemView(animal: animal)
-    }
-  ```
-
-* NavigationView {}
+* **NavigationView {}**
   * .navigationTitle("Africa")
   * .navigationBarTitleDisplayMode(.large)
   * Modifiers above should be on view inside of the NavigationView
@@ -76,12 +57,13 @@
                   }
               }
     ```
-* Image
-  * .clipShape(RoundedRectangle(cornerRadius: 12))
-  * .imageScale(.large)
-  * .clipShape(Circle())
+*  **NavigationLink**
+   *  (destination: AnimalDetailView(animal: animal)) {
+        AnimalListItemView(animal: animal)}
+        
 
-* Text("Lion")
+
+* **Text("Lion")**
   * .font(.title2)
   * .fontWeight(.heavy)
   * .foregroundColor(.accentColor)
@@ -97,7 +79,7 @@
     ```
 
 
-* Circle()
+* **Circle()**
   * .stroke(Color.accentColor, lineWidth: 2)
   * center)
   * .scaleEffect(1 + CGFloat(animation))
@@ -110,7 +92,22 @@
       }
     }
     ```
-* Slider(value: $gridColumn, in: 2...4)
+* **Image**
+  * .clipShape(RoundedRectangle(cornerRadius: 12))
+  * .imageScale(.large)
+  * .clipShape(Circle())
+
+* **Slider(value: $gridColumn, in: 2...4)**
+
+* **Group{}**
+* **GroupBox{}** -> it makes a nice background behind of its children
+* **TabView {}**
+  * .tabItem
+  * .tabViewStyle(PageTabViewStyle())
+  * .frame(minWidth: 148, idealWidth: 168, maxHeight: 180)
+* **List {}**
+  * .listRowInsets(EdgeInsets())
+  * .listStyle(.insetGrouped)
 ### Modifiers
 
 * .previewLayout(.fixed(width: 400, height: 300))
