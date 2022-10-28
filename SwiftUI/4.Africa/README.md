@@ -98,7 +98,7 @@
 
 * **TabView {}**
   * .tabItem
-  * .tabViewStyle(PageTabViewStyle())
+  * .tabViewStyle(.page)
   * .frame(minWidth: 148, idealWidth: 168, maxHeight: 180)
 * **List {}**
   * .listRowInsets(EdgeInsets())
