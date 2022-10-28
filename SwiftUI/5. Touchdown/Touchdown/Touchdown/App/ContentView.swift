@@ -20,14 +20,20 @@ struct ContentView: View {
                     .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
                     .background(.white)
                     .shadow(color: .black.opacity(0.05),
-                            radius: 5,
-                            x: 0,
-                            y: 5)
+                            radius: 5, x: 0, y: 5)
                 
                 Spacer()
                 
-                FooterView()
-                    .padding(.horizontal)
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 0) {
+                        FeaturedTabView()
+                            .padding(.vertical, 20)
+                            .frame(minHeight: 280)
+                        FooterView()
+                            .padding(.horizontal)
+                    } //: VSTACK
+                } //: SCROLL
+                
             } //: VSTACK
             .background(colorBackground.ignoresSafeArea(.all, edges: .all))
         } //: ZSTACK
@@ -41,7 +47,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
-https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/learn/lecture/24012580#overview
-tamom kardam
