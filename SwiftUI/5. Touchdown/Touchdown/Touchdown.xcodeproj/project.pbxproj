@@ -27,6 +27,7 @@
 		87D1BC74290C266200A6EE43 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1BC73290C266200A6EE43 /* Player.swift */; };
 		87D1BC76290C26AA00A6EE43 /* Bundle+decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1BC75290C26AA00A6EE43 /* Bundle+decode.swift */; };
 		87D1BC78290C2C6B00A6EE43 /* FeaturedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1BC77290C2C6B00A6EE43 /* FeaturedItemView.swift */; };
+		87F5E6A92910217900C58388 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F5E6A82910217900C58388 /* TitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		87D1BC73290C266200A6EE43 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		87D1BC75290C26AA00A6EE43 /* Bundle+decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+decode.swift"; sourceTree = "<group>"; };
 		87D1BC77290C2C6B00A6EE43 /* FeaturedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemView.swift; sourceTree = "<group>"; };
+		87F5E6A82910217900C58388 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,11 +156,12 @@
 		87C069972902F34D00A805DF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8714A9CC290C31320032E014 /* Imageslider */,
+				8714A9D5290C4E000032E014 /* CategoryView */,
+				87F5E6A82910217900C58388 /* TitleView.swift */,
 				87C0699E2902F4A200A805DF /* FooterView.swift */,
 				87C069A02902FA6F00A805DF /* NavigationBarView.swift */,
 				87C069A22902FB8700A805DF /* LogoView.swift */,
-				8714A9CC290C31320032E014 /* Imageslider */,
-				8714A9D5290C4E000032E014 /* CategoryView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				8714A9D0290C3CC20032E014 /* CategoryItemView.swift in Sources */,
 				87D1BC74290C266200A6EE43 /* Player.swift in Sources */,
 				8714A9CE290C3B070032E014 /* Category.swift in Sources */,
+				87F5E6A92910217900C58388 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

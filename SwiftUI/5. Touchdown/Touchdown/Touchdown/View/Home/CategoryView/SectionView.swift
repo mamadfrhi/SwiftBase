@@ -41,6 +41,3 @@ struct SectionView_Previews: PreviewProvider {
             .background(colorBackground)
     }
 }
-
-az avale in edame bedam
-https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/learn/lecture/24012666#overview
